@@ -7,7 +7,7 @@ export default function Welcome() {
         <LogoBlack svgClass="w-[350px] md:w-[450px] mb-2" />
         <ul className="list-disc ml-12">
           <li className="text-2xl  m-1">React + Tailwind CSS</li>
-          <li className="text-2xl m-1">Gorgeous, responsive components</li>
+          <li className="text-2xl m-1">Responsive components</li>
           <li className="text-2xl m-1">No configuration</li>
           <li className="text-2xl m-1">No install</li>
         </ul>
