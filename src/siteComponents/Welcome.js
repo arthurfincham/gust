@@ -13,8 +13,13 @@ export default function Welcome() {
         </ul>
       </div>
       <div className="flex flex-col text-center justify-end h-1/3">
-        <a className="bg-indigo-600 roboto-bold shadow-lg p-2 text-xl rounded-md m-2 text-white">Get Started</a>
-        <a className="bg-white text-indigo-600  roboto-bold p-2 shadow-lg text-xl rounded-md m-2">Components</a>
+        <a className="bg-indigo-600 roboto-bold shadow-lg p-2 text-xl rounded-md m-2 text-white hover:cursor-pointer	hover:shadow-xl">Get Started</a>
+        <a
+          className="bg-white text-indigo-600 hover:cursor-pointer	hover:shadow-xl roboto-bold p-2 shadow-lg text-xl rounded-md m-2"
+          href="/components"
+        >
+          Components
+        </a>
       </div>
     </div>
   );
