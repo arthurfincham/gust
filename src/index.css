@@ -1,13 +1,73 @@
+@import './fonts/Roboto/Roboto.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root,
+.App {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: calc(100% - 50px);
+  width: 100%;
+  background-color: #f7f7f7;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.roboto-black {
+  font-family: 'Roboto-Black';
+}
+
+.roboto-bold {
+  font-family: 'Roboto-Bold';
+}
+
+.roboto-medium {
+  font-family: 'Roboto-Medium';
+}
+
+.roboto-regular {
+  font-family: 'Roboto-Regular';
+}
+
+.roboto-light {
+  font-family: 'Roboto-Light';
+}
+
+h1 {
+  font-family: 'Roboto-Black';
+}
+
+h2 {
+  font-family: 'Roboto-Bold';
+}
+
+h3 {
+  font-family: 'Roboto-Medium';
+}
+
+span,
+button {
+  font-family: 'Roboto-Regular';
+}
+
+p,
+li {
+  font-family: 'Roboto-Light';
 }
