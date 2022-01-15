@@ -71,3 +71,7 @@ p,
 li {
   font-family: 'Roboto-Light';
 }
+
+pre {
+  font-size: 0.9em !important;
+}
