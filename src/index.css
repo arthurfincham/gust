@@ -90,6 +90,7 @@ li {
 
 nav {
   z-index: 20;
+  overflow: hidden;
 }
 
 .navContent,
@@ -104,6 +105,16 @@ main {
 }
 
 .active {
-  background-color: #5046e5;
-  color: white;
+  position: relative;
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 10px solid #5046e5;
+  border-radius: 5px;
 }

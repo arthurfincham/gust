@@ -22,7 +22,7 @@ function App() {
         <main>
           <Routes>
             <Route key={1} path="/" element={<Welcome />} />
-            <Route key={2} path="/components" element={<Components isClosed={isClosed} windowWidth={windowWidth} />} />
+            <Route key={2} path="/components" element={<Components isClosed={isClosed} windowWidth={windowWidth} setIsClosed={setIsClosed} />} />
           </Routes>
         </main>
       </div>
