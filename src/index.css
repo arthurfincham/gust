@@ -13,9 +13,8 @@ body,
 }
 
 main {
-  height: calc(100% - 50px);
-  width: 100%;
-  background-color: #f7f7f7;
+  width: calc(100% - 50px);
+  height: 100%;
 }
 
 body {

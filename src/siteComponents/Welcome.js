@@ -1,21 +1,21 @@
-import LogoBlack from '../svgs/LogoBlack';
+import LogoText from '../svgs/LogoText';
 
 export default function Welcome() {
   return (
-    <div className="flex flex-col md:flex-row w-full h-5/6 items-center justify-around lg:justify-center">
+    <div className="flex flex-col items-center justify-around w-full md:flex-row h-5/6 lg:justify-center">
       <div className="inline-flex flex-col w-3/4 md:w-1/2">
-        <LogoBlack svgClass="w-[350px] md:w-[450px] mb-2" />
-        <ul className="list-disc ml-12">
-          <li className="text-2xl  m-1">React + Tailwind CSS</li>
-          <li className="text-2xl m-1">Responsive components</li>
-          <li className="text-2xl m-1">No configuration</li>
-          <li className="text-2xl m-1">No install</li>
+        <LogoText svgClass="w-[350px] md:w-[450px] mb-2" />
+        <ul className="ml-12 list-disc">
+          <li className="m-1 text-2xl">React + Tailwind CSS</li>
+          <li className="m-1 text-2xl">Responsive components</li>
+          <li className="m-1 text-2xl">No configuration</li>
+          <li className="m-1 text-2xl">No install</li>
         </ul>
       </div>
-      <div className="flex flex-col text-center justify-end h-1/3">
-        <a className="bg-indigo-600 roboto-bold shadow-lg p-2 text-xl rounded-md m-2 text-white hover:cursor-pointer	hover:shadow-xl">Get Started</a>
+      <div className="flex flex-col justify-end text-center h-1/3">
+        <a className="p-2 m-2 text-xl text-white bg-indigo-600 rounded-md shadow-lg roboto-bold hover:cursor-pointer hover:shadow-xl">Get Started</a>
         <a
-          className="bg-white text-indigo-600 hover:cursor-pointer	hover:shadow-xl roboto-bold p-2 shadow-lg text-xl rounded-md m-2"
+          className="p-2 m-2 text-xl text-indigo-600 bg-white rounded-md shadow-lg hover:cursor-pointer hover:shadow-xl roboto-bold"
           href="/components"
         >
           Components

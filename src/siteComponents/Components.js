@@ -1,20 +1,21 @@
-import VerticalProgress from '../pubComponents/VerticalProgress';
-import HorizontalProgress from '../pubComponents/HorizontalProgress';
-import { HoriProg, VertProg } from '../pubComponents/CodeFile';
-import Wrapper from './Wrapper';
+import Progress from '../pubComponents/Progress';
+import { useState } from 'react';
 
 export default function Components() {
-  const progressProps = {
-    min: 0,
-    max: 100,
-    value: 35,
+  const progress = <Progress />;
+
+  const [liveComp, setLiveComp] = useState(progress);
+
+  const renderComp = () => {
+    return liveComp;
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <h1>Components</h1>
-      <Wrapper compChild={<HorizontalProgress {...progressProps} />} title="Horizontal Progress" myCode={HoriProg} />
-      <Wrapper compChild={<VerticalProgress {...progressProps} />} title="Vertical Progress" myCode={VertProg} />
+    <div className="flex h-full">
+      <ul className="flex flex-col border-r-2 border-collapse w-[150px]">
+        <li className="w-full px-3 py-2 border-b-2 border-collapse">Progress</li>
+      </ul>
+      <div className="flex flex-col items-center w-full">{renderComp()}</div>
     </div>
   );
 }
