@@ -5,7 +5,7 @@ import BasicCard from './BasicCard';
 export default function Cards() {
   return (
     <SectionWrapper>
-      <Wrapper compChild={<BasicCard />} title="Basic Card" myCode="Basic card" />
+      <BasicCard />
     </SectionWrapper>
   );
 }

@@ -21,7 +21,7 @@ export default function Wrapper({ compChild, title, myCode }) {
   });
 
   return (
-    <div className="flex flex-col border-[.05em] items-center w-5/6 my-6 rounded-xl shadow-md">
+    <div className="flex flex-col border-[.05em] items-center w-5/6 my-6 rounded-xl shadow-sm">
       <div className="flex flex-col min-h-[100px] w-full justify-start bg-white h-full rounded-xl">
         <div className="z-10 flex flex-row items-center justify-between w-full px-4 pt-1 shadow-lg shadow-gray-200/50">
           <h3 className="roboto-regular">{title}</h3>
@@ -36,7 +36,7 @@ export default function Wrapper({ compChild, title, myCode }) {
           </button>
         </div>
 
-        <div className="flex items-center justify-center z-0 bg-gray-50 min-h-[100px] rounded-b-xl py-2">{compChild}</div>
+        <div className="flex items-center justify-center z-0 bg-gray-50 min-h-[200px] rounded-b-xl py-2">{compChild}</div>
 
         <animated.div style={collapse} className="w-full rounded-xl bg-gray-50">
           <div ref={ref} className="w-full p-2 rounded-xl">
