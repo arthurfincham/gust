@@ -30,19 +30,27 @@ export default function Components({ isClosed, windowWidth, setIsClosed }) {
     transform: !isClosed && windowWidth <= 768 ? 'translateX(150px)' : 'translateX(0px)',
   });
 
+  const listStyle = (type) => {
+    if (type.id === liveComp.id) {
+      return {
+        color: '#5046E5',
+      };
+    }
+  };
+
   return (
-    <>
-      <div className="flex w-full mt-[50px] h-[40px] px-4 shadow-md justify-center  items-center border-t-[0.1em]">
+    <div className="h-full overflow-y-scroll md:overflow-auto componentsWrapper">
+      <div className="md:hidden flex w-full mt-[50px] h-[40px] px-4 shadow-md justify-center  items-center relative  border-t-[0.1em]">
         <button onClick={() => setIsClosed(!isClosed)} className="absolute italic text-left left-3">
           {isClosed ? <MenuIcon /> : <CloseIcon svgClass="pl-1" />}
         </button>
         <span className="roboto-bold">{liveComp.name}</span>
       </div>
-      <div className="flex w-full h-full">
+      <div className="flex w-full h-full md:mt-[50px]">
         <animated.ul style={collapse} className="flex flex-col  w-[150px] fixed h-full mt-[20px] pl-4 lg:pl-0 whitespace-nowrap">
           {compTypes.map((type) => {
             return (
-              <li key={type.id} className="w-full px-3 py-1 cursor-pointer text-md" onClick={() => setLiveComp(type)}>
+              <li key={type.id} style={listStyle(type)} className="w-full px-3 py-1 cursor-pointer text-md" onClick={() => setLiveComp(type)}>
                 {type.name}
               </li>
             );
@@ -53,6 +61,6 @@ export default function Components({ isClosed, windowWidth, setIsClosed }) {
           {renderComp()}
         </animated.div>
       </div>
-    </>
+    </div>
   );
 }

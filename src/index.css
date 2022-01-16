@@ -118,3 +118,17 @@ main {
   border-top: 10px solid #5046e5;
   border-radius: 5px;
 }
+
+.componentsWrapper {
+  overflow-x: hidden;
+}
+
+.componentsWrapper::-webkit-scrollbar,
+.App::-webkit-scrollbar {
+  display: none;
+}
+
+.App {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
