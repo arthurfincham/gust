@@ -128,3 +128,37 @@ main {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.rippleButton {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: 0 5px;
+
+  position: relative;
+  background-color: #f1f1f118;
+}
+
+.rippleButton::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: -1px;
+  background-color: inherit;
+  border-radius: 50%;
+  z-index: -1;
+  animation: ripple 1.5s ease-out infinite;
+  background-color: #5e41ffcb;
+}
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
