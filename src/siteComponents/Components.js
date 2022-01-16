@@ -1,5 +1,5 @@
 import Progress from '../pubComponents/progress/Progress';
-import Cards from '../pubComponents/Cards';
+import Cards from '../pubComponents/cards/Cards';
 import AllComponents from '../pubComponents/AllComponents';
 import { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';

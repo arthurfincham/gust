@@ -2,8 +2,8 @@ import LogoText from '../svgs/LogoText';
 
 export default function Welcome() {
   return (
-    <div className="flex flex-col items-center justify-center w-full bg-red-100 md:justify-around md:flex-row h-5/6 lg:justify-center">
-      <div className="inline-flex flex-col w-auto bg-green-100 md:w-3/4 md:w-1/2">
+    <div className="flex flex-col items-center justify-center w-full md:flex-row h-5/6 ">
+      <div className="inline-flex flex-col w-auto md:w-2/3 ">
         <LogoText svgClass="w-[350px] md:w-[450px] mb-2" />
         <ul className="ml-12 list-disc">
           <li className="m-1 text-2xl">React + Tailwind CSS</li>
