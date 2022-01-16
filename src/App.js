@@ -1,11 +1,12 @@
 import Welcome from './siteComponents/Welcome';
 import Navbar from './siteComponents/Navbar';
 import Components from './siteComponents/Components';
-import { BrowserRouter as Router, Routes, Route, Link, useParams, useRouteMatch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 function App() {
   const [isClosed, setIsClosed] = useState(true);
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -13,6 +14,7 @@ function App() {
       setWindowWidth(window.innerWidth);
     });
   }, []);
+
   return (
     <Router>
       <div className="App">
