@@ -2,10 +2,9 @@ import Progress from '../pubComponents/progress/Progress';
 import Cards from '../pubComponents/cards/Cards';
 import Buttons from '../pubComponents/buttons/Buttons';
 import AllComponents from '../pubComponents/AllComponents';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
-import MenuIcon from '../svgs/MenuIcon';
-import CloseIcon from '../svgs/CloseIcon';
+import SubNav from './SubNav';
 export default function Components({ isClosed, windowWidth, setIsClosed }) {
   const compTypes = [
     { id: 1, name: 'All Components', comp: <AllComponents /> },
@@ -40,12 +39,7 @@ export default function Components({ isClosed, windowWidth, setIsClosed }) {
 
   return (
     <div className="h-full overflow-y-scroll md:overflow-auto componentsWrapper">
-      <div className="md:hidden flex w-full mt-[50px] h-[40px] px-4 shadow-md justify-center  items-center relative  border-t-[0.1em]">
-        <button onClick={() => setIsClosed(!isClosed)} className="absolute italic text-left left-3">
-          {isClosed ? <MenuIcon /> : <CloseIcon svgClass="pl-1" />}
-        </button>
-        <span className="roboto-bold">{liveComp.name}</span>
-      </div>
+      <SubNav isClosed={isClosed} setIsClosed={setIsClosed} liveComp={liveComp} />
       <div className="flex w-full h-full md:mt-[50px]">
         <animated.ul style={collapse} className="flex flex-col  w-[150px] fixed h-full mt-[20px] pl-4 lg:pl-0 whitespace-nowrap">
           {compTypes.map((type) => {
