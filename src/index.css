@@ -26,8 +26,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+code,
+pre {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace !important;
+  font-size: 0.8em !important;
 }
 
 .roboto-black {
@@ -70,8 +72,4 @@ button {
 p,
 li {
   font-family: 'Roboto-Light';
-}
-
-pre {
-  font-size: 0.9em !important;
 }
