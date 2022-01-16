@@ -1,5 +1,5 @@
 import GustIcon from '../svgs/GustIcon';
-import MenuIcon from '../svgs/MenuIcon';
+
 export default function Navbar({ isClosed, setIsClosed }) {
   return (
     <>
@@ -13,17 +13,17 @@ export default function Navbar({ isClosed, setIsClosed }) {
           <a className="px-1 m-2 bg-white rounded-md text-md hover:cursor-pointer roboto-bold" href="/set-up">
             Set Up
           </a>
-          <a className="px-1 m-2 bg-white rounded-md text-md hover:cursor-pointer roboto-bold" href="/components">
+          <a className="hidden px-1 m-2 bg-white rounded-md sm:block text-md hover:cursor-pointer roboto-bold" href="/components">
             Components
           </a>
           <button
             onClick={() => setIsClosed(!isClosed)}
             type="button"
-            className="inline-flex items-center justify-center p-1 rounded-md md:hidden dark:fill-white hover:bg-gray-100 dark:hover:fill-white hover-bg-blue-gradient "
+            className="px-1 m-2 bg-white rounded-md md:hidden text-md hover:cursor-pointer roboto-bold "
             aria-controls="mobile-menu"
             aria-expanded="false"
           >
-            <MenuIcon svgClass="fill-black" />
+            Components
           </button>
         </div>
       </nav>
