@@ -30,7 +30,7 @@ export default function Components({ isClosed, windowWidth }) {
   });
 
   return (
-    <div className="flex h-full">
+    <div className="flex w-full h-full">
       <animated.ul style={collapse} className="flex flex-col  w-[150px] fixed h-full mt-[60px] pl-4 lg:pl-0 whitespace-nowrap">
         {compTypes.map((type) => {
           return (

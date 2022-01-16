@@ -1,4 +1,4 @@
-import { CodeBlock } from 'react-code-blocks';
+import { CodeBlock, atomOneLight } from 'react-code-blocks';
 import { useSpring, animated } from 'react-spring';
 import useMeasure from 'react-use-measure';
 import React, { useState } from 'react';
@@ -40,7 +40,7 @@ export default function Wrapper({ compChild, title, myCode }) {
 
         <animated.div style={collapse} className="w-full rounded-xl bg-gray-50">
           <div ref={ref} className="w-full p-2 rounded-xl">
-            <CodeBlock showLineNumbers={false} text={myCode} language="jsx" wrapLines />
+            <CodeBlock showLineNumbers={false} text={myCode} theme={atomOneLight} language="jsx" wrapLines />
           </div>
         </animated.div>
       </div>

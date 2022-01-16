@@ -25,10 +25,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 code,
-pre {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace !important;
-  font-size: 0.8em !important;
+pre,
+code > *,
+code > * > *,
+code > * > * > * {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace !important;
+  font-size: 12px !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .roboto-black {
@@ -91,4 +101,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.active {
+  background-color: #5046e5;
+  color: white;
 }
