@@ -10,9 +10,9 @@ export default function Progress() {
     value: 35,
   };
   return (
-    <>
+    <div className="flex flex-col items-center w-full">
       <Wrapper compChild={<HorizontalProgress {...progressProps} />} title="Horizontal Progress" myCode={HoriProg} />
       <Wrapper compChild={<VerticalProgress {...progressProps} />} title="Vertical Progress" myCode={VertProg} />
-    </>
+    </div>
   );
 }
