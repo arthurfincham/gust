@@ -1,17 +1,17 @@
-import Progress from '../pubComponents/Progress';
+import Progress from '../pubComponents/progress/Progress';
 import Cards from '../pubComponents/Cards';
 import AllComponents from '../pubComponents/AllComponents';
 import { useState, useEffect } from 'react';
-
 import { useSpring, animated } from 'react-spring';
 
 export default function Components({ isClosed, windowWidth }) {
-  const progress = <Progress />;
+  const compTypes = [
+    { id: 1, name: 'All', comp: <AllComponents /> },
+    { id: 2, name: 'Progress', comp: <Progress /> },
+    { id: 3, name: 'Cards', comp: <Cards /> },
+  ];
 
-  const cards = <Cards />;
-
-  const allComps = <AllComponents />;
-  const [liveComp, setLiveComp] = useState(allComps);
+  const [liveComp, setLiveComp] = useState(<AllComponents />);
 
   const renderComp = () => {
     return liveComp;
@@ -30,17 +30,19 @@ export default function Components({ isClosed, windowWidth }) {
   return (
     <div className="flex h-full">
       <animated.ul style={collapse} className="flex flex-col border-r-[0.05em] border-collapse w-[150px] fixed h-full mt-[50px]">
-        <li className="w-full px-3 py-2 border-b-[0.05em] border-collapse cursor-pointer" onClick={() => setLiveComp(allComps)}>
-          All
-        </li>
-        <li className="w-full px-3 py-2 border-b-[0.05em] border-collapse cursor-pointer" onClick={() => setLiveComp(progress)}>
-          Progress
-        </li>
-        <li className="w-full px-3 py-2 border-b-[0.05em] border-collapse cursor-pointer" onClick={() => setLiveComp(cards)}>
-          Cards
-        </li>
+        {compTypes.map((type) => {
+          return (
+            <li
+              key={type.id}
+              className="w-full px-3 py-2 border-b-[0.05em] border-collapse cursor-pointer text-md"
+              onClick={() => setLiveComp(type.comp)}
+            >
+              {type.name}
+            </li>
+          );
+        })}
       </animated.ul>
-      <animated.div style={mainCollapse} className="flex  flex-col mt-[50px] md:ml-[150px] items-center w-full">
+      <animated.div style={mainCollapse} className="flex flex-col mt-[50px] md:ml-[150px] items-center w-full">
         {renderComp()}
       </animated.div>
     </div>

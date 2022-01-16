@@ -1,5 +1,5 @@
-import HorizontalProgress from './HorizontalProgress';
-import VerticalProgress from './VerticalProgress';
+import HorizontalProgress from './progress/HorizontalProgress';
+import VerticalProgress from './progress/VerticalProgress';
 import { HoriProg, VertProg } from './CodeFile';
 import Wrapper from '../siteComponents/Wrapper';
 
