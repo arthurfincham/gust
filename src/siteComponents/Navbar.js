@@ -16,8 +16,8 @@ export default function Navbar() {
               Home
             </NavLink>
 
-            <NavLink activeClassName="active" className="mx-2 mt-1 bg-white rounded-md text-md hover:cursor-pointer roboto-black" to="/set-up">
-              Set Up
+            <NavLink activeClassName="active" className="mx-2 mt-1 bg-white rounded-md text-md hover:cursor-pointer roboto-black" to="/documentation">
+              Docs
             </NavLink>
 
             <NavLink

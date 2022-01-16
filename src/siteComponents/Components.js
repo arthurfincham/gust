@@ -1,6 +1,7 @@
 import Progress from '../pubComponents/progress/Progress';
 import Cards from '../pubComponents/cards/Cards';
 import Buttons from '../pubComponents/buttons/Buttons';
+import DataDisplay from '../pubComponents/data/DataDisplay';
 import AllComponents from '../pubComponents/AllComponents';
 import { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
@@ -11,6 +12,7 @@ export default function Components({ isClosed, windowWidth, setIsClosed }) {
     { id: 2, name: 'Progress', comp: <Progress /> },
     { id: 3, name: 'Cards', comp: <Cards /> },
     { id: 4, name: 'Buttons', comp: <Buttons /> },
+    { id: 5, name: 'Data Display', comp: <DataDisplay /> },
   ];
 
   const [liveComp, setLiveComp] = useState({ id: 1, name: 'All Components', comp: <AllComponents /> });

@@ -3,6 +3,8 @@ import VerticalProgress from './progress/VerticalProgress';
 import BasicCard from './cards/BasicCard';
 import BasicButton from './buttons/BasicButton';
 import OutlinedButton from './buttons/OutlinedButton';
+import DataThree from './data/DataThree';
+import DataFour from './data/DataFour';
 
 export default function AllComponents() {
   const progressProps = {
@@ -17,6 +19,8 @@ export default function AllComponents() {
       <BasicCard />
       <BasicButton />
       <OutlinedButton />
+      <DataThree />
+      <DataFour />
     </div>
   );
 }
