@@ -81,3 +81,14 @@ li {
 nav {
   z-index: 20;
 }
+
+.navContent,
+main {
+  max-width: 1200px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

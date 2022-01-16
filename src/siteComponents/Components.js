@@ -6,7 +6,7 @@ import { useSpring, animated } from 'react-spring';
 
 export default function Components({ isClosed, windowWidth }) {
   const compTypes = [
-    { id: 1, name: 'All', comp: <AllComponents /> },
+    { id: 1, name: 'All Components', comp: <AllComponents /> },
     { id: 2, name: 'Progress', comp: <Progress /> },
     { id: 3, name: 'Cards', comp: <Cards /> },
   ];
@@ -29,14 +29,10 @@ export default function Components({ isClosed, windowWidth }) {
 
   return (
     <div className="flex h-full">
-      <animated.ul style={collapse} className="flex flex-col border-r-[0.05em] border-collapse w-[150px] fixed h-full mt-[50px]">
+      <animated.ul style={collapse} className="flex flex-col  w-[150px] fixed h-full mt-[60px] pl-4 lg:pl-0 whitespace-nowrap">
         {compTypes.map((type) => {
           return (
-            <li
-              key={type.id}
-              className="w-full px-3 py-2 border-b-[0.05em] border-collapse cursor-pointer text-md"
-              onClick={() => setLiveComp(type.comp)}
-            >
+            <li key={type.id} className="w-full px-3 py-1 cursor-pointer text-md" onClick={() => setLiveComp(type.comp)}>
               {type.name}
             </li>
           );
