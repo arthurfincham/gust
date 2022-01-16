@@ -9,7 +9,7 @@ export default function DataFour() {
   ];
 
   const component = (
-    <div className="flex justify-around items-center w-full h-[100px] p-1 bg-indigo-600">
+    <div className="flex justify-around items-end w-full h-[100px] p-1 pb-3 bg-indigo-600">
       {data.map((item) => {
         return (
           <div className="flex flex-col items-center justify-center space-y-[-5px]">
@@ -31,7 +31,7 @@ export default function DataFour() {
     ];
   
     return (
-      <div className="flex justify-around items-center w-full h-[100px] p-1 bg-indigo-600">
+      <div className="flex justify-around items-end w-full h-[100px] p-1 pb-3 bg-indigo-600">
         {data.map((item) => {
           return (
             <div className="flex flex-col items-center justify-center space-y-[-5px]">
