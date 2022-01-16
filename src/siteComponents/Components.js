@@ -44,7 +44,12 @@ export default function Components({ isClosed, windowWidth, setIsClosed }) {
         <animated.ul style={collapse} className="flex flex-col  w-[150px] fixed h-full mt-[20px] pl-4 lg:pl-0 whitespace-nowrap">
           {compTypes.map((type) => {
             return (
-              <li key={type.id} style={listStyle(type)} className="w-full px-3 py-1 cursor-pointer text-md" onClick={() => setLiveComp(type)}>
+              <li
+                key={type.id}
+                style={listStyle(type)}
+                className="w-full px-3 py-1 cursor-pointer roboto-bold text-md"
+                onClick={() => setLiveComp(type)}
+              >
                 {type.name}
               </li>
             );
