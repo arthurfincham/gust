@@ -1,5 +1,8 @@
 import HorizontalProgress from './progress/HorizontalProgress';
 import VerticalProgress from './progress/VerticalProgress';
+import BasicCard from './cards/BasicCard';
+import BasicButton from './buttons/BasicButton';
+import OutlinedButton from './buttons/OutlinedButton';
 
 export default function AllComponents() {
   const progressProps = {
@@ -11,6 +14,9 @@ export default function AllComponents() {
     <div className="flex flex-col items-center w-full">
       <HorizontalProgress {...progressProps} />
       <VerticalProgress {...progressProps} />
+      <BasicCard />
+      <BasicButton />
+      <OutlinedButton />
     </div>
   );
 }

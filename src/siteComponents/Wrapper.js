@@ -23,8 +23,8 @@ export default function Wrapper({ compChild, title, myCode }) {
   return (
     <div className="flex  flex-col border-[.05em] items-center w-5/6 my-6 rounded-xl shadow-sm">
       <div className="flex flex-col min-h-[100px] w-full justify-start bg-white h-full rounded-xl">
-        <div className="z-10 flex flex-row items-center justify-between w-full px-4 pt-1 shadow-lg shadow-gray-200/50">
-          <h3 className="roboto-regular">{title}</h3>
+        <div className="z-10 flex flex-row items-center justify-between w-full px-2 pt-1 shadow-lg sm:px-4 shadow-gray-200/50">
+          <h3 className="ml-1 sm:ml-0 roboto-regular">{title}</h3>
           <button
             onClick={() => setIsCollapsed(!isCollapsed)}
             type="button"
@@ -32,7 +32,7 @@ export default function Wrapper({ compChild, title, myCode }) {
             aria-controls="mobile-menu"
             aria-expanded="false"
           >
-            <Brackets svgClass="hover:fill-indigo-600" />
+            <Brackets svgClass="w-full fill-black hover:fill-indigo-600" />
           </button>
         </div>
 

@@ -119,16 +119,12 @@ main {
   border-radius: 5px;
 }
 
-.componentsWrapper {
-  overflow-x: hidden;
-}
-
 .componentsWrapper::-webkit-scrollbar,
 .App::-webkit-scrollbar {
   display: none;
 }
 
 .App {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

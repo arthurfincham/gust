@@ -38,7 +38,7 @@ export default function Components({ isClosed, windowWidth, setIsClosed }) {
   };
 
   return (
-    <div className="h-full overflow-y-scroll md:overflow-auto componentsWrapper">
+    <div className="h-full sm:overflow-y-scroll md:overflow-auto componentsWrapper">
       <SubNav isClosed={isClosed} setIsClosed={setIsClosed} liveComp={liveComp} />
       <div className="flex w-full h-full md:mt-[50px]">
         <animated.ul style={collapse} className="flex flex-col  w-[150px] fixed h-full mt-[20px] pl-4 lg:pl-0 whitespace-nowrap">
