@@ -17,7 +17,7 @@ export default function HeaderUnderline({ text }) {
   }, []);
 
   return (
-    <>
+    <div className="flex items-center justify-center w-auto h-auto p-8 bg-white shadow-xl rounded-xl">
       <div className="relative float-left text-center ">
         <h1 className="mb-1 text-4xl text-black dark:text-white lg:text-6xl scroll-mt-24" id={text.toLowerCase()} ref={ref}>
           {text}
@@ -41,6 +41,6 @@ export default function HeaderUnderline({ text }) {
           />
         </svg>
       </div>
-    </>
+    </div>
   );
 }
