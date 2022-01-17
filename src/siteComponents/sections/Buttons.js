@@ -9,7 +9,7 @@ export default function Buttons() {
   return (
     <SectionWrapper>
       <Wrapper compChild={<BasicButton />} title="Basic Button" myCode={bbText} />
-      <Wrapper compChild={<OutlinedButton />} title="Basic Button" myCode={obText} />
+      <Wrapper compChild={<OutlinedButton />} title="Outlined Button" myCode={obText} />
     </SectionWrapper>
   );
 }

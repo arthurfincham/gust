@@ -56,7 +56,7 @@ h2 {
 <p className="text-md">Paragraph</p>`;
   return (
     <div className="w-full h-auto space-y-4 docWrapper">
-      <h2>Repeat these steps for you secondary font.</h2>
+      <h2>Repeat these steps for your secondary font.</h2>
 
       <p>
         First download the Roboto family from Google Fonts{' '}

@@ -28,7 +28,7 @@ export default function DataIncrease() {
               {unit}
               {item.value}k
             </span>
-            <div style={pointHeight(item)} className="bg-primary-700 w-[2px] mt-1 "></div>
+            <div style={pointHeight(item)} className="bg-primary-400 w-[2px] mt-1 "></div>
             <span className="text-2xl font-bold text-primary-700 handwriting">{item.label}</span>
           </div>
         );
