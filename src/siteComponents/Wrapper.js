@@ -44,7 +44,7 @@ export default function Wrapper({ compChild, title, myCode }) {
           </button>
         </div>
 
-        <div className="flex items-center justify-center z-0 bg-gray-50 min-h-[200px] rounded-b-xl py-2">{compChild}</div>
+        <div className="flex items-center justify-center z-0 bg-gray-50 min-h-[200px] rounded-b-xl py-2 componentWrappingBox">{compChild}</div>
 
         <animated.div style={collapse} className="w-full rounded-xl bg-gray-50">
           <div ref={ref} className="w-full p-2 rounded-xl">
