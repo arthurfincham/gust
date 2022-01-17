@@ -1,4 +1,4 @@
-export default function VerticalTimeline() {
+export default function NumberedTimeline() {
   const rowDirection = (item) => {
     if (item.id % 2 == 0) {
       return {
@@ -12,10 +12,10 @@ export default function VerticalTimeline() {
   };
 
   const data = [
-    { id: 1, date: 2017, title: 'Left School' },
-    { id: 2, date: 2018, title: 'Started Coding' },
-    { id: 3, date: 2019, title: 'Learned Ruby' },
-    { id: 4, date: 2020, title: 'Learned React' },
+    { id: 1, title: 'Left School' },
+    { id: 2, title: 'Started Coding' },
+    { id: 3, title: 'Learned Ruby' },
+    { id: 4, title: 'Learned React' },
   ];
 
   const lineStyle = {
@@ -30,7 +30,7 @@ export default function VerticalTimeline() {
             <div className="w-1/3 h-2 shrink-0"></div>
             <div className="relative w-1/3 h-full">
               <span style={lineStyle} className="z-10 absolute left-[50%] top-[50%] bg-white text-md">
-                {event.date}
+                {event.id}
               </span>
             </div>
             <div className="flex justify-center w-1/3 shrink-0 ">

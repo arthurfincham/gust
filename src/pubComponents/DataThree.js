@@ -10,8 +10,8 @@ export default function DataThree() {
       {data.map((item) => {
         return (
           <div className="flex flex-col items-center justify-center space-y-[-5px]">
-            <span className="text-5xl text-white roboto-black">{item.value}</span>
-            <span className="text-white text-md roboto-regular">{item.label}</span>
+            <span className="text-4xl text-white md:text-5xl roboto-black">{item.value}</span>
+            <span className="text-2xl font-bold text-white text-md handwriting">{item.label}</span>
           </div>
         );
       })}

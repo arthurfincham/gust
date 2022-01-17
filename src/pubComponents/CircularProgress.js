@@ -26,10 +26,7 @@ export default function CircularProgress({ min, max, value }) {
           cy={radius}
         />
       </svg>
-      <span className="absolute text-2xl text-gray-700 roboto-light">
-        {current}
-        <small className="text-sm">%</small>
-      </span>
+      <span className="absolute text-4xl text-gray-700 handwriting">{current}%</span>
     </div>
   );
 }

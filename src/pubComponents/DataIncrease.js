@@ -1,10 +1,10 @@
 export default function DataIncrease() {
   const data = [
-    { label: '17', value: 55000 },
-    { label: '18', value: 97000 },
-    { label: '19', value: 121000 },
-    { label: '20', value: 136000 },
-    { label: '21', value: 148000 },
+    { label: '2017', value: 55000 },
+    { label: '2018', value: 97000 },
+    { label: '2019', value: 121000 },
+    { label: '2020', value: 136000 },
+    { label: '2021', value: 148000 },
   ];
 
   const max = 210000;
@@ -29,14 +29,12 @@ export default function DataIncrease() {
       {data.map((item) => {
         return (
           <div className="flex flex-col items-center justify-end h-full">
-            <span className="text-sm tracking-wide text-primary-700 roboto-bold">
+            <span className="text-sm tracking-wide text-primary-700 roboto-black">
               {unit}
               {formatValue(item)}
             </span>
-            <div style={pointHeight(item)} className="bg-primary-700 w-[2px] "></div>
-            <span className="p-1 text-xs text-primary-700 border-2 border-indigo-700 rounded-full roboto-black h-[25px] w-[25px] flex items-center justify-center">
-              {item.label}
-            </span>
+            <div style={pointHeight(item)} className="bg-primary-700 w-[2px] mt-1 "></div>
+            <span className="text-2xl font-bold text-primary-700 handwriting">{item.label}</span>
           </div>
         );
       })}

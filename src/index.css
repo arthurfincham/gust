@@ -1,4 +1,5 @@
 @import './fonts/Roboto/Roboto.css';
+@import './fonts/NanumPenScript/NanumPenScript.css';
 
 @tailwind base;
 @tailwind components;
@@ -55,6 +56,11 @@ code > * > * > * {
 
 .roboto-regular {
   font-family: 'Roboto-Regular';
+}
+
+.handwriting {
+  font-family: 'NanumPenScript' !important;
+  letter-spacing: 0.05em;
 }
 
 .roboto-light {
