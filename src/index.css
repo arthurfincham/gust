@@ -162,3 +162,15 @@ main {
     opacity: 0;
   }
 }
+
+.docWrapper > p {
+  font-family: 'Roboto-Regular';
+}
+
+.docWrapper > h2 {
+  font-size: 1.2em;
+}
+
+.docWrapper {
+  margin-bottom: 20vh;
+}
