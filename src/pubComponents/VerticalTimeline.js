@@ -23,7 +23,7 @@ export default function VerticalTimeline() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center w-3/4 h-[500px] p-1  bg-white shadow-lg relative">
+    <div className="flex flex-col justify-center items-center w-3/4 h-[500px] p-1  bg-white rounded-xl shadow-xl relative">
       {data.map((event) => {
         return (
           <div style={rowDirection(event)} className="flex items-center w-3/4 shrink-0 h-1/6">

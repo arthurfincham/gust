@@ -1,5 +1,4 @@
 import Progress from './sections/Progress';
-import Cards from './sections/Cards';
 import Buttons from './sections/Buttons';
 import DataDisplay from './sections/DataDisplay';
 import AllComponents from './sections/AllComponents';
@@ -11,10 +10,9 @@ export default function Components({ isClosed, windowWidth, setIsClosed }) {
   const compTypes = [
     { id: 1, name: 'All Components', comp: <AllComponents /> },
     { id: 2, name: 'Progress', comp: <Progress /> },
-    { id: 3, name: 'Cards', comp: <Cards /> },
-    { id: 4, name: 'Buttons', comp: <Buttons /> },
-    { id: 5, name: 'Data Display', comp: <DataDisplay /> },
-    { id: 6, name: 'Timeline', comp: <Timeline /> },
+    { id: 3, name: 'Buttons', comp: <Buttons /> },
+    { id: 4, name: 'Data Display', comp: <DataDisplay /> },
+    { id: 5, name: 'Timeline', comp: <Timeline /> },
   ];
 
   const [liveComp, setLiveComp] = useState({ id: 1, name: 'All Components', comp: <AllComponents /> });

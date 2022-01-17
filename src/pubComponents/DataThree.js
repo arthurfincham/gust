@@ -6,7 +6,7 @@ export default function DataThree() {
   ];
 
   return (
-    <div className="flex justify-around items-end w-full h-[100px] p-1 pb-3 bg-primary-600">
+    <div className="flex justify-around items-end w-full h-[100px] p-1 pb-3 bg-primary-600 rounded-xl shadow-xl">
       {data.map((item) => {
         return (
           <div className="flex flex-col items-center justify-center space-y-[-5px]">

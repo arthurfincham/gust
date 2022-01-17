@@ -56,11 +56,18 @@ h2 {
 <p className="text-md">Paragraph</p>`;
   return (
     <div className="w-full h-auto space-y-4 docWrapper">
-      <h2>To use a custom font, please see below.</h2>
-      <p>The current fonts are variants of Roboto which is a readily available on Google Fonts.</p>
+      <h2>Repeat these steps for you secondary font.</h2>
+
       <p>
         First download the Roboto family from Google Fonts{' '}
-        <a className="underline text-primary" href="https://fonts.google.com/specimen/Roboto" alt="link to Roboto">
+        <a className="font-bold underline text-primary-700" href="https://fonts.google.com/specimen/Nanum+Pen+Script" alt="link to Nanum">
+          here
+        </a>
+        .
+      </p>
+      <p className="text-gray-500">
+        Then download the Nanum Pen Script family from Google Fonts{' '}
+        <a className="font-bold underline text-primary-700" href="https://fonts.google.com/specimen/Roboto" alt="link to Roboto">
           here
         </a>
         .
@@ -71,6 +78,7 @@ h2 {
       <p>Inside your Roboto.css file, import the fonts using Font Face.</p>
       <DocCodeBlock lang="css">{fontFace}</DocCodeBlock>
       <p>Then import this file in your index.css</p>
+
       <br></br>
       <h2>Configuring Fonts</h2>
       <p>I would recommend assigning each HTML heading type to a variant, as well as creating a class for each font for later customisation.</p>

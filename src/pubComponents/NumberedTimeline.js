@@ -23,7 +23,7 @@ export default function NumberedTimeline() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center w-3/4 h-[500px] p-1  bg-white shadow-lg relative">
+    <div className="flex flex-col justify-center items-center w-3/4 h-[500px] p-1  bg-white rounded-xl shadow-xl relative ">
       {data.map((event) => {
         return (
           <div style={rowDirection(event)} className="flex items-center w-3/4 shrink-0 h-1/5">
@@ -37,7 +37,7 @@ export default function NumberedTimeline() {
               </span>
             </div>
             <div className="flex justify-center w-1/3 shrink-0 ">
-              <span className="text-2xl handwriting">{event.title}</span>
+              <span className="text-2xl sm:whitespace-nowrap handwriting">{event.title}</span>
             </div>
           </div>
         );
