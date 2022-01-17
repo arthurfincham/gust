@@ -3,6 +3,7 @@ import Buttons from './sections/Buttons';
 import DataDisplay from './sections/DataDisplay';
 import AllComponents from './sections/AllComponents';
 import Timeline from './sections/Timeline';
+import Text from './sections/Text';
 import { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import SubNav from './SubNav';
@@ -13,6 +14,7 @@ export default function Components({ isClosed, windowWidth, setIsClosed }) {
     { id: 3, name: 'Buttons', comp: <Buttons /> },
     { id: 4, name: 'Data Display', comp: <DataDisplay /> },
     { id: 5, name: 'Timeline', comp: <Timeline /> },
+    { id: 6, name: 'Text', comp: <Text /> },
   ];
 
   const [liveComp, setLiveComp] = useState({ id: 1, name: 'All Components', comp: <AllComponents /> });

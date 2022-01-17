@@ -2,6 +2,7 @@ import Progress from './Progress';
 import DataDisplay from './DataDisplay';
 import Buttons from './Buttons';
 import Timeline from './Timeline';
+import Text from './Text';
 
 export default function AllComponents() {
   return (
@@ -10,6 +11,7 @@ export default function AllComponents() {
       <DataDisplay />
       <Buttons />
       <Timeline />
+      <Text />
     </div>
   );
 }
