@@ -1,6 +1,6 @@
 import DocCodeBlock from '../DocCodeBlock';
 export default function InstallTailwind() {
-  const configFile = `// tailwing.config.js
+  const configFile = `// ./tailwing.config.js
   
 module.exports = {
     content: ['./src/**/*.{html,js}'],
@@ -17,13 +17,13 @@ module.exports = {
   };
   `;
 
-  const imports = `// index.css
+  const imports = `// ./src/index.css
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;`;
   return (
-    <div className="w-full h-auto space-y-4 text-md roboto-regular">
+    <div className="w-full h-auto space-y-4 docWrapper">
       <p>
         To get started, install Tailwind CSS. For more details, visit the Tailwind docs{' '}
         <a className="text-indigo-600 underline" href="https://tailwindcss.com/docs/installation" alt="link to tailwind">

@@ -3,11 +3,12 @@ import { useSpring, animated } from 'react-spring';
 import DocNav from './DocNav';
 import GettingStarted from './documentation/GettingStarted';
 import InstallTailwind from './documentation/InstallTailwind';
+import CustomFonts from './documentation/CustomFonts';
 export default function Documentation({ isClosed, windowWidth, setIsClosed }) {
   const docTypes = [
     { id: 1, name: 'Getting Started', doc: <GettingStarted /> },
     { id: 2, name: 'Set Up Tailwind', doc: <InstallTailwind /> },
-    { id: 3, name: 'Customisation', doc: <GettingStarted /> },
+    { id: 3, name: 'Custom Fonts', doc: <CustomFonts /> },
   ];
 
   const [liveDoc, setLiveDoc] = useState({ id: 1, name: 'Getting Started', doc: <GettingStarted /> });

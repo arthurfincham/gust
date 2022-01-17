@@ -3,7 +3,7 @@ import DummyBar from '../../pubComponents/DummyBar';
 
 export default function GettingStarted() {
   return (
-    <div className="w-full h-auto space-y-4 text-md">
+    <div className="w-full h-auto space-y-4 docWrapper">
       <div className="flex justify-center w-full demoBox">
         <DummyBar min={0} max={100} value={75} />
       </div>
