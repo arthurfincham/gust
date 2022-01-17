@@ -3,21 +3,35 @@ import DocCodeBlock from '../DocCodeBlock';
 export default function CustomColors() {
   const configFile = `// ./tailwing.config.js
   
-...
-'primary': {
-  50: '#eef2ff',
-  100: '#e0e7ff',
-  200: '#c7d2fe',
-  300: '#a5b4fc',
-  400: '#818cf8',
-  500: '#6366f1',
-  600: '#4f46e5',
-  700: '#4338ca',
-  800: '#3730a3',
-  900: '#312e81',
-},
-...
-`;
+module.exports = {
+  content: ['./src/**/*.{html,js}'],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#eef2ff',
+          100: '#e0e7ff',
+          200: '#c7d2fe',
+          300: '#a5b4fc',
+          400: '#818cf8',
+          500: '#6366f1',
+          600: '#4f46e5',
+          700: '#4338ca',
+          800: '#3730a3',
+          900: '#312e81',
+        },
+      },
+    },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
+  },
+  plugins: [],
+};
+  `;
 
   const themeColors = [
     'bg-primary-50',
@@ -33,9 +47,9 @@ export default function CustomColors() {
   ];
 
   return (
-    <div className="w-full h-auto space-y-4 docWrapper">
+    <div className="w-full h-auto space-y-4 docWrapper scroll-mt-20" id="customColors">
+      <h2>Colors</h2>
       <p>By default, Gust uses Tailwind's indigo as the primary color.</p>
-      <DocCodeBlock lang="javascript">{configFile}</DocCodeBlock>
       <p>These colors render like so.</p>
       <div className="flex flex-wrap items-center space-y-4 colorPreviewDocs">
         {themeColors.map((color) => {
@@ -47,6 +61,8 @@ export default function CustomColors() {
           );
         })}
       </div>
+      <p>Add these colors to your Tailwind config. It should now look like this:</p>
+      <DocCodeBlock lang="javascript">{configFile}</DocCodeBlock>
       <p>To use another color for you project, replace the colors defined in your config file.</p>
       <p>
         Alternatively, choose a color from Tailwind's selection{' '}

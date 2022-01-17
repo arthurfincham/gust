@@ -9,6 +9,8 @@ export default function CustomFonts() {
       - Roboto-Bold.ttf
       ...
       - Roboto.css
+    > NanumPenScript
+      - NanumPenScript-regular.ttf
   `;
 
   const fontFace = ` /* ./src/fonts/Roboto/Roboto.css */
@@ -17,10 +19,17 @@ export default function CustomFonts() {
   font-family: 'Roboto-Black';
   src: local('Roboto-Black'), url('./Roboto-Black.ttf') format('truetype');
 }
-  
+
+...
+
 @font-face {
-  font-family: 'Roboto-Bold';
-  src: local('Roboto-Bold'), url('./Roboto-Bold.ttf') format('truetype');
+  font-family: 'Roboto-Light';
+  src: local('Roboto-Light'), url('./Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumPenScript';
+  src: local('NanumPenscript-Regular'), url('./NanumPenscript-Regular.ttf') format('truetype');
 }
   `;
 
@@ -41,8 +50,14 @@ h2 {
   font-family: 'Roboto-Black';
 }
 
-.roboto-bold {
-  font-family: 'Roboto-Bold';
+...
+
+.roboto-light {
+  font-family: 'Roboto-Light';
+}
+
+.handwriting {
+  font-family: 'NanumPenscript';
 }
 
 ...
@@ -55,23 +70,26 @@ h2 {
   const fontSized = `<h1 className="text-3xl">Title</h1>
 <p className="text-md">Paragraph</p>`;
   return (
-    <div className="w-full h-auto space-y-4 docWrapper">
-      <h2>Repeat these steps for your secondary font.</h2>
+    <div className="w-full h-auto space-y-4 docWrapper scroll-mt-20" id="customFonts">
+      <h2>Fonts</h2>
+
+      <p>Gust uses two fonts: a sans serif and a handwriting typeface.</p>
 
       <p>
-        First download the Roboto family from Google Fonts{' '}
+        Download the Roboto family from Google Fonts{' '}
         <a className="font-bold underline text-primary-700" href="https://fonts.google.com/specimen/Nanum+Pen+Script" alt="link to Nanum">
           here
         </a>
         .
       </p>
       <p>
-        Then download the Nanum Pen Script family from Google Fonts{' '}
+        Download the Nanum Pen Script family from Google Fonts{' '}
         <a className="font-bold underline text-primary-700" href="https://fonts.google.com/specimen/Roboto" alt="link to Roboto">
           here
         </a>
         .
       </p>
+      <p>Add both inside a fonts directory in your project.</p>
       <DocCodeBlock lang="markdown">{folderStructure}</DocCodeBlock>
       <br></br>
       <h2>Importing Fonts</h2>
@@ -97,8 +115,9 @@ h2 {
       <p>In this example, Heading and Paragraph will be the same size.</p>
       <p>To change the font size, use Tailwinds classes names like t-shirt sizing.</p>
       <DocCodeBlock lang="jsx">{fontSized} </DocCodeBlock>
+      <br></br>
       <p>
-        If you would like to use another font, find another from Google or any other source and follow the steps above. I reccomend using a font with
+        If you would like to use another font, find another from Google or any other source and follow the steps above. I recommend using a font with
         at least 5 variants.
       </p>
     </div>

@@ -7,8 +7,8 @@ export default function GettingStarted() {
   return (
     <>
       <InstallTailwind />
-      <CustomFonts />
       <CustomColors />
+      <CustomFonts />
       <UsingComponents />
     </>
   );

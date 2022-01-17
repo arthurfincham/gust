@@ -5,22 +5,7 @@ export default function InstallTailwind() {
 module.exports = {
   content: ['./src/**/*.{html,js}'],
   theme: {
-    extend: {
-      colors: {
-        primary: {
-          50: '#eef2ff',
-          100: '#e0e7ff',
-          200: '#c7d2fe',
-          300: '#a5b4fc',
-          400: '#818cf8',
-          500: '#6366f1',
-          600: '#4f46e5',
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#312e81',
-        },
-      },
-    },
+    extend: {},
     screens: {
       sm: '640px',
       md: '768px',
@@ -37,7 +22,7 @@ module.exports = {
 @tailwind components;
 @tailwind utilities;`;
   return (
-    <div className="w-full h-auto space-y-4 docWrapper">
+    <div className="w-full h-auto mt-3 space-y-4 docWrapper scroll-mt-24" id="setUpTailwind">
       <h2>Set Up Tailwind</h2>
       <p>
         To get started, install Tailwind CSS. For more details, visit the Tailwind docs{' '}

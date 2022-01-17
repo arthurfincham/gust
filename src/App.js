@@ -18,7 +18,7 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
+      <div className="App scroll-smooth">
         <Navbar setIsClosed={setIsClosed} isClosed={isClosed} />
         <main>
           <Routes>

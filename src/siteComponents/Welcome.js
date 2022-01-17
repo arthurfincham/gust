@@ -6,9 +6,9 @@ export default function Welcome() {
       <div className="inline-flex flex-col w-auto mt-12 sm:mt-0 md:w-2/3 ">
         <LogoText svgClass="w-[350px] md:w-[450px] mb-2" />
         <ul className="ml-12 list-disc">
-          <li className="m-1 text-2xl">React + Tailwind CSS</li>
-          <li className="m-1 text-2xl">Responsive components</li>
-          <li className="m-1 text-2xl">No configuration</li>
+          <li className="m-1 text-2xl">React and Tailwind CSS</li>
+          <li className="m-1 text-2xl">Functional components</li>
+          <li className="m-1 text-2xl">Minimal config</li>
           <li className="m-1 text-2xl">No install</li>
         </ul>
       </div>
@@ -20,7 +20,7 @@ export default function Welcome() {
           Get Started
         </a>
         <a
-          className="p-2 m-2 text-xl text-primary-600 bg-white rounded-md shadow-lg hover:cursor-pointer  border-[0.01em] hover:shadow-xl roboto-bold"
+          className="p-2 m-2 text-xl text-primary-600 bg-white rounded-md shadow-lg hover:cursor-pointer  shadow-indigo-200/50 border-[0.01em] hover:shadow-xl roboto-bold"
           href="/components"
         >
           Components
