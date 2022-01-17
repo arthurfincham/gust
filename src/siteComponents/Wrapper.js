@@ -32,7 +32,7 @@ export default function Wrapper({ compChild, title, myCode }) {
             aria-controls="mobile-menu"
             aria-expanded="false"
           >
-            <Brackets svgClass="w-full fill-black hover:fill-indigo-600" />
+            <Brackets svgClass="w-full fill-black hover:fill-primary-600" />
           </button>
         </div>
 

@@ -3,19 +3,33 @@ export default function InstallTailwind() {
   const configFile = `// ./tailwing.config.js
   
 module.exports = {
-    content: ['./src/**/*.{html,js}'],
-    theme: {
-      extend: {},
-      screens: {
-        sm: '640px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1280px',
+  content: ['./src/**/*.{html,js}'],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#eef2ff',
+          100: '#e0e7ff',
+          200: '#c7d2fe',
+          300: '#a5b4fc',
+          400: '#818cf8',
+          500: '#6366f1',
+          600: '#4f46e5',
+          700: '#4338ca',
+          800: '#3730a3',
+          900: '#312e81',
+        },
       },
     },
-    plugins: [],
-  };
-  `;
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
+  },
+  plugins: [],
+};`;
 
   const imports = `// ./src/index.css
 
@@ -26,7 +40,7 @@ module.exports = {
     <div className="w-full h-auto space-y-4 docWrapper">
       <p>
         To get started, install Tailwind CSS. For more details, visit the Tailwind docs{' '}
-        <a className="text-indigo-600 underline" href="https://tailwindcss.com/docs/installation" alt="link to tailwind">
+        <a className="underline text-primary-600" href="https://tailwindcss.com/docs/installation" alt="link to tailwind">
           here
         </a>
         .

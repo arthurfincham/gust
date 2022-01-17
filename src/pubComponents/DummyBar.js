@@ -27,8 +27,8 @@ export default function DummyBar({ min, max, value }) {
   });
 
   const component = (
-    <div className="h-[20px] w-2/3 bg-indigo-100 relative shadow-sm  my-auto rounded-xl">
-      <div style={progressStyle} className="h-[20px] rounded-l-xl bg-indigo-600 absolute">
+    <div className="h-[20px] w-2/3 bg-primary-100 relative shadow-sm  my-auto rounded-xl">
+      <div style={progressStyle} className="h-[20px] rounded-l-xl bg-primary-600 absolute">
         <span className="absolute top-[-20px] text-center w-[10px] text-xs right-[-1px]">{current}%</span>
       </div>
     </div>
@@ -47,8 +47,8 @@ export default function HorizontalProgress({ min, max, value }) {
       width: '\${current}%',
     };
     return (
-      <div className="h-[20px] w-2/3 bg-indigo-100 relative shadow-sm my-auto rounded-xl">
-          <div style={progressStyle} className="h-[20px] rounded-l-xl bg-indigo-600 absolute">
+      <div className="h-[20px] w-2/3 bg-primary-100 relative shadow-sm my-auto rounded-xl">
+          <div style={progressStyle} className="h-[20px] rounded-l-xl bg-primary-600 absolute">
           <span className="absolute top-[-20px] text-center w-[10px] text-xs 
             right-[-1px]">{current}%</span>
         </div>
@@ -69,7 +69,7 @@ export default function HorizontalProgress({ min, max, value }) {
             aria-controls="mobile-menu"
             aria-expanded="false"
           >
-            <Brackets svgClass="w-full fill-black hover:fill-indigo-600" />
+            <Brackets svgClass="w-full fill-black hover:fill-primary-600" />
             <div className={`${rippleClass} absolute top-[10px] right-[19px]`}>
               <span className="rippleButton"></span>
             </div>

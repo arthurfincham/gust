@@ -8,7 +8,7 @@ export default function DataThree() {
   ];
 
   const component = (
-    <div className="flex justify-around items-end w-full h-[100px] p-1 pb-3 bg-indigo-600">
+    <div className="flex justify-around items-end w-full h-[100px] p-1 pb-3 bg-primary-600">
       {data.map((item) => {
         return (
           <div className="flex flex-col items-center justify-center space-y-[-5px]">
@@ -29,7 +29,7 @@ export default function DataThree() {
     ];
   
     return (
-      <div className="flex justify-around items-end w-full h-[100px] p-1 pb-3 bg-indigo-600">
+      <div className="flex justify-around items-end w-full h-[100px] p-1 pb-3 bg-primary-600">
         {data.map((item) => {
           return (
             <div className="flex flex-col items-center justify-center space-y-[-5px]">
