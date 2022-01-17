@@ -5,6 +5,14 @@ import React, { useState } from 'react';
 import Brackets from '../svgs/Brackets';
 
 export default function Wrapper({ compChild, title, myCode }) {
+  const [code, setCode] = useState('');
+
+  fetch(myCode)
+    .then((r) => r.text())
+    .then((text) => {
+      setHCode(text);
+    });
+
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const [ref, bounds] = useMeasure();
@@ -40,7 +48,7 @@ export default function Wrapper({ compChild, title, myCode }) {
 
         <animated.div style={collapse} className="w-full rounded-xl bg-gray-50">
           <div ref={ref} className="w-full p-2 rounded-xl">
-            <CodeBlock showLineNumbers={false} text={myCode} theme={atomOneLight} language="jsx" wrapLines />
+            <CodeBlock showLineNumbers={false} text={code} theme={atomOneLight} language="jsx" wrapLines />
           </div>
         </animated.div>
       </div>
