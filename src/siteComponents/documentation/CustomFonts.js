@@ -57,7 +57,7 @@ h2 {
 }
 
 .handwriting {
-  font-family: 'NanumPenscript';
+  font-family: 'NanumPenScript';
 }
 
 ...
