@@ -1,6 +1,7 @@
 import HorizontalProgress from './HorizontalProgress';
 import VerticalProgress from './VerticalProgress';
 import SectionWrapper from '../../siteComponents/SectionWrapper';
+import Wrapper from '../../siteComponents/Wrapper';
 
 export default function Progress() {
   const progressProps = {
