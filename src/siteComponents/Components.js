@@ -1,6 +1,6 @@
 import Progress from './sections/Progress';
-import Cards from '../pubComponents/cards/Cards';
-import Buttons from '../pubComponents/buttons/Buttons';
+import Cards from './sections/Cards';
+import Buttons from './sections/Buttons';
 import DataDisplay from './sections/DataDisplay';
 // import AllComponents from '../pubComponents/AllComponents';
 import { useState } from 'react';

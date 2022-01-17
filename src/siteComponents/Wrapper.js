@@ -10,7 +10,7 @@ export default function Wrapper({ compChild, title, myCode }) {
   fetch(myCode)
     .then((r) => r.text())
     .then((text) => {
-      setHCode(text);
+      setCode(text);
     });
 
   const [isCollapsed, setIsCollapsed] = useState(true);
