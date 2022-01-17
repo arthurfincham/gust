@@ -38,6 +38,7 @@ module.exports = {
 @tailwind utilities;`;
   return (
     <div className="w-full h-auto space-y-4 docWrapper">
+      <h2>Set Up Tailwind</h2>
       <p>
         To get started, install Tailwind CSS. For more details, visit the Tailwind docs{' '}
         <a className="underline text-primary-600" href="https://tailwindcss.com/docs/installation" alt="link to tailwind">

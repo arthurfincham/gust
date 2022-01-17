@@ -5,12 +5,14 @@ import GettingStarted from './documentation/GettingStarted';
 import InstallTailwind from './documentation/InstallTailwind';
 import CustomFonts from './documentation/CustomFonts';
 import CustomColors from './documentation/CustomColors';
+import UsingComponents from './documentation/UsingComponents';
 export default function Documentation({ isClosed, windowWidth, setIsClosed }) {
   const docTypes = [
     { id: 1, name: 'Getting Started', doc: <GettingStarted /> },
     { id: 2, name: 'Set Up Tailwind', doc: <InstallTailwind /> },
     { id: 3, name: 'Custom Fonts', doc: <CustomFonts /> },
     { id: 4, name: 'Custom Colors', doc: <CustomColors /> },
+    { id: 5, name: 'Components', doc: <UsingComponents /> },
   ];
 
   const [liveDoc, setLiveDoc] = useState({ id: 1, name: 'Getting Started', doc: <GettingStarted /> });

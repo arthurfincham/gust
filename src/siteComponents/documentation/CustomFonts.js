@@ -65,7 +65,7 @@ h2 {
         </a>
         .
       </p>
-      <p className="text-gray-500">
+      <p>
         Then download the Nanum Pen Script family from Google Fonts{' '}
         <a className="font-bold underline text-primary-700" href="https://fonts.google.com/specimen/Roboto" alt="link to Roboto">
           here
