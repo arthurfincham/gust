@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 export default function Navbar() {
   let location = useLocation();
 
-  const navShadow = location.pathname.includes('components') ? 'md:shadow-md' : 'shadow-md';
+  const navShadow = location.pathname.includes('components') || location.pathname.includes('documentation') ? 'md:shadow-md' : 'shadow-md';
   return (
     <>
       <nav className={`bg-white w-full h-[50px]  px-4 w-full  flex justify-center ${navShadow} fixed`}>

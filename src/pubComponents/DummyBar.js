@@ -34,6 +34,12 @@ export default function DummyBar({ min, max, value }) {
     </div>
   );
 
+  const [rippleClass, setRippleClass] = useState('');
+  const handleClick = () => {
+    setIsCollapsed(!isCollapsed);
+    setRippleClass('hidden');
+  };
+
   const code = `
 export default function HorizontalProgress({ min, max, value }) {
     const current = Math.ceil((value / (max - min)) * 100);
@@ -57,14 +63,14 @@ export default function HorizontalProgress({ min, max, value }) {
         <div className="relative z-10 flex flex-row items-center justify-between w-full px-2 pt-1 shadow-lg sm:px-4 shadow-gray-200/50">
           <h3 className="ml-1 sm:ml-0 roboto-regular">Horizontal Progress</h3>
           <button
-            onClick={() => setIsCollapsed(!isCollapsed)}
+            onClick={() => handleClick()}
             type="button"
             className="inline-flex items-center justify-center w-[50px]"
             aria-controls="mobile-menu"
             aria-expanded="false"
           >
             <Brackets svgClass="w-full fill-black hover:fill-indigo-600" />
-            <div className="absolute top-[10px] right-[19px] ">
+            <div className={`${rippleClass} absolute top-[10px] right-[19px]`}>
               <span className="rippleButton"></span>
             </div>
           </button>

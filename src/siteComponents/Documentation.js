@@ -2,10 +2,12 @@ import { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import DocNav from './DocNav';
 import GettingStarted from './documentation/GettingStarted';
+import InstallTailwind from './documentation/InstallTailwind';
 export default function Documentation({ isClosed, windowWidth, setIsClosed }) {
   const docTypes = [
     { id: 1, name: 'Getting Started', doc: <GettingStarted /> },
-    { id: 2, name: 'Customisation', doc: <GettingStarted /> },
+    { id: 2, name: 'Set Up Tailwind', doc: <InstallTailwind /> },
+    { id: 3, name: 'Customisation', doc: <GettingStarted /> },
   ];
 
   const [liveDoc, setLiveDoc] = useState({ id: 1, name: 'Getting Started', doc: <GettingStarted /> });
@@ -35,7 +37,7 @@ export default function Documentation({ isClosed, windowWidth, setIsClosed }) {
   return (
     <div className="h-full sm:overflow-y-scroll md:overflow-auto componentsWrapper">
       <DocNav isClosed={isClosed} setIsClosed={setIsClosed} liveDoc={liveDoc} />
-      <div className="flex w-full h-full md:mt-[50px]">
+      <div className="flex w-full h-full mt-[20px] md:mt-[50px]">
         <animated.ul style={collapse} className="flex flex-col  w-[150px] fixed h-full mt-[20px] pl-4 lg:pl-0 whitespace-nowrap">
           {docTypes.map((type) => {
             return (
