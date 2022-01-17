@@ -174,3 +174,14 @@ main {
 .docWrapper {
   margin-bottom: 20vh;
 }
+
+.colorPreviewDocs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.colorPreviewDocs > * {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 20%;
+}

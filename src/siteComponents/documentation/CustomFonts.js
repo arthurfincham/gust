@@ -60,7 +60,7 @@ h2 {
       <p>The current fonts are variants of Roboto which is a readily available on Google Fonts.</p>
       <p>
         First download the Roboto family from Google Fonts{' '}
-        <a className="text-primary underline" href="https://fonts.google.com/specimen/Roboto" alt="link to Roboto">
+        <a className="underline text-primary" href="https://fonts.google.com/specimen/Roboto" alt="link to Roboto">
           here
         </a>
         .
@@ -79,7 +79,7 @@ h2 {
       <h2>Font Sizing</h2>
       <p>
         Remember that Tailwind uses{' '}
-        <a className="text-primary underline" href="https://tailwindcss.com/docs/preflight" alt="Preflight Link">
+        <a className="underline text-primary" href="https://tailwindcss.com/docs/preflight" alt="Preflight Link">
           Preflight
         </a>
         .
