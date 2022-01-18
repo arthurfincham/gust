@@ -5,7 +5,7 @@ import huText from '../../pubComponents/HeaderUnderline.txt';
 export default function Text() {
   return (
     <SectionWrapper>
-      <Wrapper compChild={<HeaderUnderline text="Header" />} title="Header Underline" myCode={huText} />
+      <Wrapper compChild={<HeaderUnderline text="Header" />} title="Header Underline" myCode={huText} renderButton={true} />
     </SectionWrapper>
   );
 }

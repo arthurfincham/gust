@@ -1,10 +1,11 @@
 import { CodeBlock, atomOneLight } from 'react-code-blocks';
 import { useSpring, animated } from 'react-spring';
 import useMeasure from 'react-use-measure';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Brackets from '../svgs/Brackets';
+import useForceUpdate from 'use-force-update';
 
-export default function Wrapper({ compChild, title, myCode }) {
+export default function Wrapper({ compChild, title, myCode, renderButton = false }) {
   const [code, setCode] = useState('');
 
   fetch(myCode)
