@@ -8,6 +8,7 @@ import Lists from './sections/Lists';
 import { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import SubNav from './SubNav';
+
 export default function Components({ isClosed, windowWidth, setIsClosed }) {
   const compTypes = [
     { id: 1, name: 'All Components', comp: <AllComponents /> },
@@ -55,6 +56,7 @@ export default function Components({ isClosed, windowWidth, setIsClosed }) {
                 style={listStyle(type)}
                 className="w-full px-3 py-1 cursor-pointer roboto-bold text-md"
                 onClick={() => setLiveComp(type)}
+                data-testid={type.name.replace(/\s/g, '')}
               >
                 {type.name}
               </li>
