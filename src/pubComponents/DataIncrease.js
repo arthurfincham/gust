@@ -21,9 +21,9 @@ export default function DataIncrease() {
 
   return (
     <div className="flex justify-around items-end w-full h-[200px] p-1 pb-3 bg-white rounded-xl shadow-xl">
-      {data.map((item) => {
+      {data.map((item, index) => {
         return (
-          <div className="flex flex-col items-center justify-end h-full">
+          <div key={index + 1} className="flex flex-col items-center justify-end h-full">
             <span className="text-sm tracking-wide text-primary-700 roboto-black">
               {unit}
               {item.value}k

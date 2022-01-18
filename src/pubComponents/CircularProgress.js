@@ -8,7 +8,7 @@ export default function CircularProgress({ min, max, value }) {
 
   return (
     <div className="h-[150px] w-[150px]  bg-white relative shadow-lg  rounded-xl flex items-center relative justify-center">
-      <svg height={radius * 2} width={radius * 2} strokeLinecap="round" stroke-width={stroke}>
+      <svg height={radius * 2} width={radius * 2} strokeLinecap="round" strokeWidth={stroke}>
         <circle
           className="stroke-primary-100 fill-transparent"
           transform={`rotate(-90 ${radius} ${radius})`}
