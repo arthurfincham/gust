@@ -19,6 +19,7 @@
   },
   "scripts": {
     "prestart": "node src/preBuild.js",
+    "pretest": "node src/preBuild.js",
     "start": " react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
