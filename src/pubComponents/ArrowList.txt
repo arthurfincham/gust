@@ -11,7 +11,7 @@ export default function ArrowList() {
   const data = ['List One', 'List Two', 'List Three', 'List Four'];
 
   return (
-    <div className="flex flexflex flex-col justify-center items-center w-3/4 h-[500px] p-1  bg-white rounded-xl shadow-xl relative text-2xl">
+    <div className="flex flex-col justify-center items-center w-3/4 h-[500px] p-1  bg-white rounded-xl shadow-xl relative text-2xl">
       <ul className="space-y-6">
         {data.map((item) => {
           return (
