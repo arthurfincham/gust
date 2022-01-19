@@ -23,14 +23,7 @@ export default function HeaderUnderline({ text }) {
           {text}
         </h1>
 
-        <svg
-          className="mt-[-10px] absolute stroke-black dark:stroke-white "
-          left="0"
-          right="0"
-          width="100%"
-          height="100%"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg className="mt-[-10px] absolute stroke-primary-600" left="0" right="0" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <span className="sr-only">Underline</span>
           <path
             id="pathItem"
