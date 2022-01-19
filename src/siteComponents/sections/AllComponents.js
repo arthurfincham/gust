@@ -3,6 +3,7 @@ import DataDisplay from './DataDisplay';
 import Buttons from './Buttons';
 import Timeline from './Timeline';
 import Text from './Text';
+import Lists from './Lists';
 
 export default function AllComponents() {
   return (
@@ -12,6 +13,7 @@ export default function AllComponents() {
       <Buttons />
       <Timeline />
       <Text />
+      <Lists />
     </div>
   );
 }

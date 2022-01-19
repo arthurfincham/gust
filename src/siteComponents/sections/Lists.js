@@ -9,7 +9,7 @@ export default function Lists() {
   return (
     <SectionWrapper>
       <Wrapper compChild={<ArrowList />} title="Arrow List" myCode={alText} />
-      <Wrapper compChild={<HandList />} title="Hand List" myCode={hlText} />
+      <Wrapper compChild={<HandList />} title="Handwritten List" myCode={hlText} />
     </SectionWrapper>
   );
 }
