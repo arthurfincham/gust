@@ -39,7 +39,7 @@ export default function VerticalTimeline() {
           </div>
         );
       })}
-      <span style={lineStyle} className="h-5/6 bg-black w-[2px] absolute left-[50%] top-[50%] z-0"></span>
+      <span style={lineStyle} className="h-5/6 bg-primary-600 w-[2px] absolute left-[50%] top-[50%] z-0"></span>
     </div>
   );
 }

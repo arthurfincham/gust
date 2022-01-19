@@ -18,7 +18,7 @@ export default function HandList() {
         {data.map((item, index) => {
           return (
             <div style={listStyle}>
-              <span className="handwriting w-[50px] text-right">{getNum(index)}</span>
+              <span className="handwriting w-[50px] text-right text-primary-600">{getNum(index)}</span>
               <li className="ml-3 listItem roboto-bold">{item}</li>
             </div>
           );

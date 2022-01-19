@@ -1,6 +1,13 @@
 module.exports = {
   content: ['./src/**/*.{html,js}'],
   theme: {
+    fontFamily: {
+      hand: 'NanumPenScript',
+      sans: 'Roboto-Regular',
+      'sans-m': 'Roboto-Medium',
+      'sans-b': 'Roboto-Bold',
+      'sans-bb': 'Roboto-Black',
+    },
     extend: {
       colors: {
         primary: {

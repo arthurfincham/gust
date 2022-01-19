@@ -33,34 +33,45 @@ export default function CustomFonts() {
 }
   `;
 
-  const fontClasses = `/* ./src/fonts/Roboto/Roboto.css */
-...
+  const fontClasses = `// ./tailwind.config.js
 
-h1 {
-  font-family: 'Roboto-Black';
-}
+module.exports = {
+  content: ['./src/**/*.{html,js}'],
+  theme: {
+    fontFamily: {
+      hand: 'NanumPenScript',
+      sans: 'Roboto-Regular',
+      'sans-m': 'Roboto-Medium',
+      'sans-b': 'Roboto-Bold',
+      'sans-bb': 'Roboto-Black',
+    },
+    extend: {
+      colors: {
+        primary: {
+          50: '#eef2ff',
+          100: '#e0e7ff',
+          200: '#c7d2fe',
+          300: '#a5b4fc',
+          400: '#818cf8',
+          500: '#6366f1',
+          600: '#4f46e5',
+          700: '#4338ca',
+          800: '#3730a3',
+          900: '#312e81',
+        },
+      },
+    },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
+  },
+  plugins: [],
+};
+  
 
-h2 {
-  font-family: 'Roboto-Bold';
-}
-
-...
-
-.roboto-black {
-  font-family: 'Roboto-Black';
-}
-
-...
-
-.roboto-light {
-  font-family: 'Roboto-Light';
-}
-
-.handwriting {
-  font-family: 'NanumPenScript';
-}
-
-...
   `;
 
   const fontUnsized = `<h1>Title</h1>
@@ -99,8 +110,8 @@ h2 {
 
       <br></br>
       <h2>Configuring Fonts</h2>
-      <p>I would recommend assigning each HTML heading type to a variant, as well as creating a class for each font for later customisation.</p>
-      <DocCodeBlock lang="css">{fontClasses}</DocCodeBlock>
+      <p>Add your fonts to your Tailwind config file.</p>
+      <DocCodeBlock lang="javascript">{fontClasses}</DocCodeBlock>
       <br></br>
       <h2>Font Sizing</h2>
       <p>

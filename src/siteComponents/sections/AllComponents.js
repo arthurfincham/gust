@@ -4,6 +4,7 @@ import Buttons from './Buttons';
 import Timeline from './Timeline';
 import Text from './Text';
 import Lists from './Lists';
+import Forms from './Forms';
 
 export default function AllComponents() {
   return (
@@ -14,6 +15,7 @@ export default function AllComponents() {
       <Timeline />
       <Text />
       <Lists />
+      <Forms />
     </div>
   );
 }

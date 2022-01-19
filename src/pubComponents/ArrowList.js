@@ -17,7 +17,7 @@ export default function ArrowList() {
           return (
             <div className="flex items-center">
               {arrow()}
-              <li className="ml-3 roboto-bold">{item}</li>
+              <li className="ml-3 font-sans">{item}</li>
             </div>
           );
         })}
