@@ -7,7 +7,7 @@ import ntText from '../../pubComponents/NumberedTimeline.txt';
 export default function Timeline() {
   return (
     <SectionWrapper>
-      <Wrapper compChild={<VerticalTimeline />} title="Vertical Timeline" myCode={vtText} />
+      <Wrapper compChild={<VerticalTimeline />} title="Dated Timeline" myCode={vtText} />
       <Wrapper compChild={<NumberedTimeline />} title="Numbered Timeline" myCode={ntText} />
     </SectionWrapper>
   );
