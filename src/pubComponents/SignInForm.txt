@@ -27,8 +27,8 @@ export default function SignInForm() {
         {logo}
         <form className="flex flex-col items-center justify-between w-11/12 max-w-[600px] ">
           <div className="flex flex-col w-full md:w-3/4 lg:w-2/3">
-            <FormField type="text" name="email" placeholder="email" className="h-[40px]" />
-            <FormField type="password" name="password" placeholder="password" className="h-[40px]" />
+            <FormField type="text" name="email" placeholder="email" className="h-[50px]" />
+            <FormField type="password" name="password" placeholder="password" className="h-[50px]" />
           </div>
           <input
             type="submit"

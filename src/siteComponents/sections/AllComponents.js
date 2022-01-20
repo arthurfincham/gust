@@ -5,6 +5,7 @@ import Timeline from './Timeline';
 import Text from './Text';
 import Lists from './Lists';
 import Forms from './Forms';
+import Waves from './Waves';
 
 export default function AllComponents() {
   return (
@@ -16,6 +17,7 @@ export default function AllComponents() {
       <Text />
       <Lists />
       <Forms />
+      <Waves />
     </div>
   );
 }

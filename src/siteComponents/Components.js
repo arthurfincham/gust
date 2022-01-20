@@ -6,6 +6,7 @@ import Timeline from './sections/Timeline';
 import Text from './sections/Text';
 import Lists from './sections/Lists';
 import Forms from './sections/Forms';
+import Waves from './sections/Waves';
 import { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import SubNav from './SubNav';
@@ -20,6 +21,7 @@ export default function Components({ isClosed, windowWidth, setIsClosed }) {
     { id: 6, name: 'Text', comp: <Text /> },
     { id: 7, name: 'Lists', comp: <Lists /> },
     { id: 8, name: 'Forms', comp: <Forms /> },
+    { id: 9, name: 'Waves', comp: <Waves /> },
   ];
 
   const [liveComp, setLiveComp] = useState({ id: 1, name: 'All Components', comp: <AllComponents /> });
