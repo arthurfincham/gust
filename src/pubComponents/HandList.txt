@@ -19,7 +19,7 @@ export default function HandList() {
           return (
             <div style={listStyle}>
               <span className="handwriting w-[50px] text-right text-primary-600">{getNum(index)}</span>
-              <li className="ml-3 listItem roboto-bold">{item}</li>
+              <li className="ml-3 listItem font-sans-b">{item}</li>
             </div>
           );
         })}

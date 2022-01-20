@@ -34,7 +34,7 @@ export default function VerticalTimeline() {
               </span>
             </div>
             <div className="flex justify-center w-1/3 shrink-0 ">
-              <span className="tracking-wide roboto-bold">{event.title}</span>
+              <span className="tracking-wide font-sans-b">{event.title}</span>
             </div>
           </div>
         );

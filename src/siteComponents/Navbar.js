@@ -12,17 +12,17 @@ export default function Navbar() {
         <div className="flex items-center w-full navContent">
           <GustIcon svgClass="fill-primary-600 h-[40px]" />
           <div className="flex justify-end w-full ml-6 space-x-4 ">
-            <NavLink activeclassname="active" className="mx-2 mt-1 bg-white rounded-md text-md hover:cursor-pointer roboto-black" to="/">
+            <NavLink activeclassname="active" className="mx-2 mt-1 bg-white rounded-md text-md hover:cursor-pointer font-sans-bb" to="/">
               Home
             </NavLink>
 
-            <NavLink activeclassname="active" className="mx-2 mt-1 bg-white rounded-md text-md hover:cursor-pointer roboto-black" to="/documentation">
+            <NavLink activeclassname="active" className="mx-2 mt-1 bg-white rounded-md text-md hover:cursor-pointer font-sans-bb" to="/documentation">
               Docs
             </NavLink>
 
             <NavLink
               activeclassname="active"
-              className="hidden mx-2 mt-1 bg-white rounded-md text-md md:block hover:cursor-pointer roboto-black"
+              className="hidden mx-2 mt-1 bg-white rounded-md text-md md:block hover:cursor-pointer font-sans-bb"
               to="/components"
             >
               Components
@@ -30,7 +30,7 @@ export default function Navbar() {
 
             <NavLink
               activeclassname="active"
-              className="mx-2 mt-1 bg-white rounded-md md:hidden text-md hover:cursor-pointer roboto-black"
+              className="mx-2 mt-1 bg-white rounded-md md:hidden text-md hover:cursor-pointer font-sans-bb"
               to="/components"
             >
               Components

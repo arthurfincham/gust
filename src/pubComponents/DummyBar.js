@@ -66,7 +66,7 @@ export default function HorizontalProgress({ min, max, value }) {
     <div className="flex  flex-col border-[.05em] items-center w-5/6 my-6 rounded-xl shadow-sm">
       <div className="flex flex-col min-h-[50px] w-full justify-start bg-white h-full rounded-xl">
         <div className="relative z-10 flex flex-row items-center justify-between w-full px-2 pt-1 shadow-lg sm:px-4 shadow-gray-200/50">
-          <h3 className="ml-1 sm:ml-0 roboto-regular">Horizontal Progress</h3>
+          <h3 className="ml-1 sm:ml-0 font-sans">Horizontal Progress</h3>
           <button
             onClick={() => handleClick()}
             type="button"

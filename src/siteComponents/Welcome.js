@@ -14,14 +14,14 @@ export default function Welcome() {
       </div>
       <div className="flex flex-col justify-end text-center h-1/4 sm:h-1/3">
         <a
-          className="p-2 m-2 text-xl text-white bg-primary-600 rounded-md shadow-lg roboto-bold hover:cursor-pointer  border-[0.01em] hover:shadow-xl"
+          className="p-2 m-2 text-xl text-white bg-primary-600 rounded-md shadow-lg font-sans-b hover:cursor-pointer  border-[0.01em] hover:shadow-xl"
           href="/documentation"
           data-testid="getStartedButton"
         >
           Get Started
         </a>
         <a
-          className="p-2 m-2 text-xl text-primary-600 bg-white rounded-md shadow-lg hover:cursor-pointer  shadow-indigo-200/50 border-[0.01em] hover:shadow-xl roboto-bold"
+          className="p-2 m-2 text-xl text-primary-600 bg-white rounded-md shadow-lg hover:cursor-pointer  shadow-indigo-200/50 border-[0.01em] hover:shadow-xl font-sans-b"
           href="/components"
           data-testid="componentsButton"
         >

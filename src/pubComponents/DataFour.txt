@@ -11,7 +11,7 @@ export default function DataFour() {
       {data.map((item, index) => {
         return (
           <div key={index + 1} className="flex flex-col items-center justify-center space-y-[-5px]">
-            <span className="text-4xl text-white md:text-5xl roboto-black">{item.value}</span>
+            <span className="text-4xl text-white md:text-5xl font-sans-bb">{item.value}</span>
             <span className="text-2xl font-bold text-white text-md handwriting">{item.label}</span>
           </div>
         );

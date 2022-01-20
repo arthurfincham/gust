@@ -56,7 +56,7 @@ export default function Components({ isClosed, windowWidth, setIsClosed }) {
               <li
                 key={type.id}
                 style={listStyle(type)}
-                className="w-full px-3 py-1 cursor-pointer roboto-bold text-md"
+                className="w-full px-3 py-1 cursor-pointer font-sans-b text-md"
                 onClick={() => setLiveComp(type)}
                 data-testid={type.name.replace(/\s/g, '')}
               >

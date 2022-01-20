@@ -7,7 +7,7 @@ export default function DocNav({ isClosed, setIsClosed, liveDoc }) {
       <button onClick={() => setIsClosed(!isClosed)} className="absolute italic text-left left-3">
         {isClosed ? <MenuIcon /> : <CloseIcon svgClass="pl-1" />}
       </button>
-      <span className="roboto-bold">{liveDoc.name}</span>
+      <span className="font-sans-b">{liveDoc.name}</span>
     </div>
   );
 }

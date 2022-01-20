@@ -5,8 +5,8 @@ export default function CustomFonts() {
 > src
   > fonts 
     > Roboto 
-      - Roboto-Black.ttf 
-      - Roboto-Bold.ttf
+      - font-sans-bb.ttf 
+      - font-sans-b.ttf
       ...
       - Roboto.css
     > NanumPenScript
@@ -16,8 +16,8 @@ export default function CustomFonts() {
   const fontFace = ` /* ./src/fonts/Roboto/Roboto.css */
 
 @font-face {
-  font-family: 'Roboto-Black';
-  src: local('Roboto-Black'), url('./Roboto-Black.ttf') format('truetype');
+  font-family: 'font-sans-bb';
+  src: local('font-sans-bb'), url('./font-sans-bb.ttf') format('truetype');
 }
 
 ...
@@ -40,10 +40,10 @@ module.exports = {
   theme: {
     fontFamily: {
       hand: 'NanumPenScript',
-      sans: 'Roboto-Regular',
-      'sans-m': 'Roboto-Medium',
-      'sans-b': 'Roboto-Bold',
-      'sans-bb': 'Roboto-Black',
+      sans: 'font-sans',
+      'sans-m': 'font-sans-m',
+      'sans-b': 'font-sans-b',
+      'sans-bb': 'font-sans-bb',
     },
     extend: {
       colors: {

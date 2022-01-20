@@ -31,7 +31,7 @@ export default function NumberedTimeline() {
             <div className="relative w-1/3 h-full">
               <span
                 style={lineStyle}
-                className="z-10 absolute left-[50%] top-[50%]  text-md w-1 h-1 border-2 border-primary-600 rounded-full flex items-center justify-center p-3 roboto-black bg-primary-600 text-white"
+                className="z-10 absolute left-[50%] top-[50%]  text-md w-1 h-1 border-2 border-primary-600 rounded-full flex items-center justify-center p-3 font-sans-bb bg-primary-600 text-white"
               >
                 {event.id}
               </span>

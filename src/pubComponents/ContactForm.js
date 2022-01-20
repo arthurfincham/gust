@@ -21,9 +21,9 @@ export default function ContactForm() {
           </div>
           <textarea
             className="p-3 mx-4 placeholder:font-hand placeholder:text-2xl w-full text-lg border-primary-300 roboto-regular  rounded-lg h-[200px] shadow-lg focus:outline-none"
-            placeholder="Enter your message"
+            placeholder="Enter your message..."
           ></textarea>
-          <input type="submit" name="Send" className="p-2 mx-auto mt-4 text-xl bg-white shadow-md text-primary-600 roboto-black h-3/4 rounded-xl" />
+          <input type="submit" name="Send" className="p-2 mx-auto mt-4 text-xl bg-white shadow-md text-primary-600 font-sans-bb h-3/4 rounded-xl" />
         </form>
       </div>
     </>

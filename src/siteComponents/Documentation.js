@@ -41,23 +41,23 @@ export default function Documentation({ isClosed, windowWidth, setIsClosed }) {
         <animated.ul style={collapse} className="flex flex-col  w-[150px] fixed h-full mt-[20px] pl-4 lg:pl-0 whitespace-nowrap">
           <li
             style={listStyle(gettingStarted)}
-            className="w-full px-3 py-1 cursor-pointer roboto-bold text-md"
+            className="w-full px-3 py-1 cursor-pointer font-sans-b text-md"
             onClick={() => setLiveDoc(gettingStarted)}
           >
             Getting Started
           </li>
-          <a className="w-full px-3 py-1 ml-4 cursor-pointer roboto-bold text-md" href="#setUpTailwind">
+          <a className="w-full px-3 py-1 ml-4 cursor-pointer font-sans-b text-md" href="#setUpTailwind">
             Set Up Tailwind
           </a>
-          <a className="w-full px-3 py-1 ml-4 cursor-pointer roboto-bold text-md" href="#customColors">
+          <a className="w-full px-3 py-1 ml-4 cursor-pointer font-sans-b text-md" href="#customColors">
             Colors
           </a>
-          <a className="w-full px-3 py-1 ml-4 cursor-pointer roboto-bold text-md" href="#customFonts">
+          <a className="w-full px-3 py-1 ml-4 cursor-pointer font-sans-b text-md" href="#customFonts">
             Fonts
           </a>
           <li
             style={listStyle(usingComponents)}
-            className="w-full px-3 py-1 cursor-pointer roboto-bold text-md"
+            className="w-full px-3 py-1 cursor-pointer font-sans-b text-md"
             onClick={() => setLiveDoc(usingComponents)}
           >
             Components
