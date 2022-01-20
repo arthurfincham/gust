@@ -10,13 +10,13 @@ import Waves from './Waves';
 export default function AllComponents() {
   return (
     <div className="flex flex-col items-center w-full">
-      <Progress />
-      <DataDisplay />
       <Buttons />
-      <Timeline />
-      <Text />
-      <Lists />
+      <DataDisplay />
       <Forms />
+      <Lists />
+      <Progress />
+      <Text />
+      <Timeline />
       <Waves />
     </div>
   );

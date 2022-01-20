@@ -1,10 +1,7 @@
 import { useState } from 'react';
-import { useSpring, animated } from 'react-spring';
+import { useSpring, animated, useTransition } from 'react-spring';
 import DocNav from './DocNav';
 import GettingStarted from './documentation/GettingStarted';
-import InstallTailwind from './documentation/InstallTailwind';
-import CustomFonts from './documentation/CustomFonts';
-import CustomColors from './documentation/CustomColors';
 import UsingComponents from './documentation/UsingComponents';
 export default function Documentation({ isClosed, windowWidth, setIsClosed }) {
   const gettingStarted = { id: 1, name: 'Getting Started', doc: <GettingStarted /> };

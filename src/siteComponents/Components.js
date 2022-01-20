@@ -14,13 +14,13 @@ import SubNav from './SubNav';
 export default function Components({ isClosed, windowWidth, setIsClosed }) {
   const compTypes = [
     { id: 1, name: 'All Components', comp: <AllComponents /> },
-    { id: 2, name: 'Progress', comp: <Progress /> },
-    { id: 3, name: 'Buttons', comp: <Buttons /> },
-    { id: 4, name: 'Data Display', comp: <DataDisplay /> },
-    { id: 5, name: 'Timeline', comp: <Timeline /> },
-    { id: 6, name: 'Text', comp: <Text /> },
-    { id: 7, name: 'Lists', comp: <Lists /> },
-    { id: 8, name: 'Forms', comp: <Forms /> },
+    { id: 2, name: 'Buttons', comp: <Buttons /> },
+    { id: 3, name: 'Data Display', comp: <DataDisplay /> },
+    { id: 4, name: 'Forms', comp: <Forms /> },
+    { id: 5, name: 'Lists', comp: <Lists /> },
+    { id: 6, name: 'Progress', comp: <Progress /> },
+    { id: 7, name: 'Text', comp: <Text /> },
+    { id: 8, name: 'Timeline', comp: <Timeline /> },
     { id: 9, name: 'Waves', comp: <Waves /> },
   ];
 
