@@ -1,13 +1,14 @@
 export default {
   'code[class*="language-"]': {
-    color: '#c5c8c6',
-    textShadow: '0 1px rgba(0, 0, 0, 0.3)',
-    fontFamily: "Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace",
-    direction: 'ltr',
+    color: '#4D45E6',
+    background: 'none',
+    fontFamily: "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+    fontSize: '1em',
     textAlign: 'left',
     whiteSpace: 'pre',
     wordSpacing: 'normal',
     wordBreak: 'normal',
+    wordWrap: 'normal',
     lineHeight: '1.5',
     MozTabSize: '4',
     OTabSize: '4',
@@ -16,16 +17,22 @@ export default {
     MozHyphens: 'none',
     msHyphens: 'none',
     hyphens: 'none',
+    maxHeight: 'inherit',
+    height: 'inherit',
+    padding: '0 1em',
+    display: 'block',
+    overflow: 'auto',
   },
   'pre[class*="language-"]': {
-    color: '#c5c8c6',
-    textShadow: '0 1px rgba(0, 0, 0, 0.3)',
-    fontFamily: "Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace",
-    direction: 'ltr',
+    color: 'black',
+    background: 'none',
+    fontFamily: "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+    fontSize: '1em',
     textAlign: 'left',
     whiteSpace: 'pre',
     wordSpacing: 'normal',
     wordBreak: 'normal',
+    wordWrap: 'normal',
     lineHeight: '1.5',
     MozTabSize: '4',
     OTabSize: '4',
@@ -34,120 +41,212 @@ export default {
     MozHyphens: 'none',
     msHyphens: 'none',
     hyphens: 'none',
-    padding: '1em',
+    position: 'relative',
     margin: '.5em 0',
-    overflow: 'auto',
-    borderRadius: '0.3em',
-    background: '#1d1f21',
+    overflow: 'visible',
+    padding: '0',
+    backgroundColor: '#fdfdfd',
+    WebkitBoxSizing: 'border-box',
+    MozBoxSizing: 'border-box',
+    boxSizing: 'border-box',
+    marginBottom: '1em',
+  },
+  'pre[class*="language-"]>code': {
+    position: 'relative',
+    borderLeft: '10px solid #358ccb',
+    boxShadow: '-1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf',
+    backgroundColor: '#fdfdfd',
+    backgroundImage: 'linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%)',
+    backgroundSize: '3em 3em',
+    backgroundOrigin: 'content-box',
+    backgroundAttachment: 'local',
   },
   ':not(pre) > code[class*="language-"]': {
-    background: '#1d1f21',
-    padding: '.1em',
-    borderRadius: '.3em',
+    backgroundColor: '#fdfdfd',
+    WebkitBoxSizing: 'border-box',
+    MozBoxSizing: 'border-box',
+    boxSizing: 'border-box',
+    marginBottom: '1em',
+    position: 'relative',
+    padding: '.2em',
+    borderRadius: '0.3em',
+    color: '#c92c2c',
+    border: '1px solid rgba(0, 0, 0, 0.1)',
+    display: 'inline',
+    whiteSpace: 'normal',
+  },
+  'pre[class*="language-"]:before': {
+    content: "''",
+    zIndex: '-2',
+    display: 'block',
+    position: 'absolute',
+    bottom: '0.75em',
+    left: '0.18em',
+    width: '40%',
+    height: '20%',
+    maxHeight: '13em',
+    boxShadow: '0px 13px 8px #979797',
+    WebkitTransform: 'rotate(-2deg)',
+    MozTransform: 'rotate(-2deg)',
+    msTransform: 'rotate(-2deg)',
+    OTransform: 'rotate(-2deg)',
+    transform: 'rotate(-2deg)',
+  },
+  'pre[class*="language-"]:after': {
+    content: "''",
+    zIndex: '-2',
+    display: 'block',
+    position: 'absolute',
+    bottom: '0.75em',
+    left: 'auto',
+    width: '40%',
+    height: '20%',
+    maxHeight: '13em',
+    boxShadow: '0px 13px 8px #979797',
+    WebkitTransform: 'rotate(2deg)',
+    MozTransform: 'rotate(2deg)',
+    msTransform: 'rotate(2deg)',
+    OTransform: 'rotate(2deg)',
+    transform: 'rotate(2deg)',
+    right: '0.75em',
   },
   comment: {
-    color: '#7C7C7C',
+    color: '#7D8B99',
+  },
+  'block-comment': {
+    color: '#7D8B99',
   },
   prolog: {
-    color: '#7C7C7C',
+    color: '#7D8B99',
   },
   doctype: {
-    color: '#7C7C7C',
+    color: '#7D8B99',
   },
   cdata: {
-    color: '#7C7C7C',
+    color: '#7D8B99',
   },
   punctuation: {
-    color: '#c5c8c6',
-  },
-  '.namespace': {
-    Opacity: '.7',
+    color: '#5F6364',
   },
   property: {
-    color: '#96CBFE',
-  },
-  keyword: {
-    color: '#96CBFE',
+    color: '#F23C1F',
   },
   tag: {
-    color: '#96CBFE',
-  },
-  'class-name': {
-    color: '#FFFFB6',
-    textDecoration: 'underline',
+    color: '#F23C1F',
   },
   boolean: {
-    color: '#99CC99',
-  },
-  constant: {
-    color: '#99CC99',
-  },
-  symbol: {
-    color: '#f92672',
-  },
-  deleted: {
-    color: '#f92672',
+    color: '#F23C1F',
   },
   number: {
-    color: '#FF73FD',
+    color: '#F23C1F',
+  },
+  'function-name': {
+    color: '#F23C1F',
+  },
+  constant: {
+    color: '#F23C1F',
+  },
+  symbol: {
+    color: '#F23C1F',
+  },
+  deleted: {
+    color: '#F23C1F',
   },
   selector: {
-    color: '#A8FF60',
+    color: '#4F47E6',
   },
   'attr-name': {
-    color: '#A8FF60',
+    color: '#4F47E6',
+    fontStyle: 'italic',
   },
   string: {
-    color: '#A8FF60',
+    color: '#4F47E6',
   },
   char: {
-    color: '#A8FF60',
+    color: '#4F47E6',
+  },
+  function: {
+    color: '#4F47E6',
+    fontWeight: 'bold',
   },
   builtin: {
-    color: '#A8FF60',
+    color: '#4F47E6',
   },
   inserted: {
-    color: '#A8FF60',
-  },
-  variable: {
-    color: '#C6C5FE',
+    color: '#4F47E6',
   },
   operator: {
-    color: '#EDEDED',
+    color: '#a67f59',
+    background: 'rgba(255, 255, 255, 0.5)',
   },
   entity: {
-    color: '#FFFFB6',
+    color: '#a67f59',
+    background: 'rgba(255, 255, 255, 0.5)',
     cursor: 'help',
   },
   url: {
-    color: '#96CBFE',
+    color: '#a67f59',
+    background: 'rgba(255, 255, 255, 0.5)',
   },
-  '.language-css .token.string': {
-    color: '#87C38A',
-  },
-  '.style .token.string': {
-    color: '#87C38A',
+  variable: {
+    color: '#a67f59',
+    background: 'rgba(255, 255, 255, 0.5)',
   },
   atrule: {
-    color: '#F9EE98',
+    color: '#7B75E6',
   },
   'attr-value': {
-    color: '#F9EE98',
+    color: '#6A7180',
   },
-  function: {
-    color: '#DAD085',
+  keyword: {
+    color: '#7B75E6',
+  },
+  'class-name': {
+    color: '#7B75E6',
   },
   regex: {
-    color: '#E9C062',
+    color: '#e90',
   },
   important: {
-    color: '#fd971f',
-    fontWeight: 'bold',
+    color: '#e90',
+    fontWeight: 'normal',
+  },
+  '.language-css .token.string': {
+    color: '#a67f59',
+    background: 'rgba(255, 255, 255, 0.5)',
+  },
+  '.style .token.string': {
+    color: '#a67f59',
+    background: 'rgba(255, 255, 255, 0.5)',
   },
   bold: {
     fontWeight: 'bold',
   },
   italic: {
     fontStyle: 'italic',
+  },
+  namespace: {
+    Opacity: '.7',
+  },
+  'pre[class*="language-"].line-numbers.line-numbers': {
+    paddingLeft: '0',
+  },
+  'pre[class*="language-"].line-numbers.line-numbers code': {
+    paddingLeft: '3.8em',
+  },
+  'pre[class*="language-"].line-numbers.line-numbers .line-numbers-rows': {
+    left: '0',
+  },
+  'pre[class*="language-"][data-line]': {
+    paddingTop: '0',
+    paddingBottom: '0',
+    paddingLeft: '0',
+  },
+  'pre[data-line] code': {
+    position: 'relative',
+    paddingLeft: '4em',
+  },
+  'pre .line-highlight': {
+    marginTop: '0',
   },
 };
