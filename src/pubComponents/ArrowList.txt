@@ -1,4 +1,4 @@
-export default function ArrowList() {
+export default function ArrowList({ listData }) {
   const arrow = () => {
     return (
       <svg height="26px" width="30px" className="fill-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.71 16.67">
@@ -8,16 +8,14 @@ export default function ArrowList() {
     );
   };
 
-  const data = ['List One', 'List Two', 'List Three', 'List Four'];
-
   return (
     <div className="flex flex-col justify-center items-center w-3/4 h-[500px] p-1  bg-white rounded-xl shadow-xl relative text-2xl">
       <ul className="space-y-6">
-        {data.map((item) => {
+        {listData.map((item) => {
           return (
             <div className="flex items-center">
               {arrow()}
-              <li className="ml-3 font-sans">{item}</li>
+              <li className="ml-3 font-sans text-md">{item}</li>
             </div>
           );
         })}

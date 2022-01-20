@@ -1,4 +1,4 @@
-export default function ContactForm() {
+export default function ContactFormTitled() {
   const FormField = ({ type, name, placeholder, className }) => {
     return (
       <input
@@ -14,6 +14,7 @@ export default function ContactForm() {
   return (
     <>
       <div className="flex flex-col items-center justify-around w-full h-auto p-4 shadow-xl bg-primary-600 rounded-xl">
+        <h3 className="mb-2 ml-4 text-4xl text-white text-shadow-md md:text-6xl font-sans-bb">Get in touch.</h3>
         <form className="flex flex-col items-center justify-between w-11/12 max-w-[600px] ">
           <div className="flex flex-col w-full md:flex-row">
             <FormField type="text" name="name" placeholder="name" className="ml-0 mr-0 md:mr-2 md:w-2/5 h-[40px]" />
@@ -27,7 +28,7 @@ export default function ContactForm() {
             type="submit"
             name="Send"
             value="Send"
-            className="p-3 px-4 mx-auto mt-3 text-lg bg-white rounded-lg shadow-md text-primary-600 font-sans-bb h-3/4"
+            className="p-3 px-4 mx-auto mt-3 text-lg bg-white rounded-lg shadow-md cursor-pointer text-primary-600 font-sans-bb h-3/4 hover:shadow-xl"
           />
         </form>
       </div>
