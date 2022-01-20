@@ -28,7 +28,7 @@ export default function ContactFormTitled() {
             type="submit"
             name="Send"
             value="Send"
-            className="p-3 px-4 mx-auto mt-3 text-lg bg-white rounded-lg shadow-md cursor-pointer text-primary-600 font-sans-bb h-3/4 hover:shadow-xl"
+            className="p-3 px-4 mx-auto mt-3 text-lg bg-white rounded-lg shadow-md cursor-pointer text-primary-600 font-sans-bb h-3/4 hover:bg-gray-100"
           />
         </form>
       </div>

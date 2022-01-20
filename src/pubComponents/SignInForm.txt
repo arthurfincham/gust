@@ -34,7 +34,7 @@ export default function SignInForm() {
             type="submit"
             name="Send"
             value="Sign In"
-            className="p-2 px-3 mx-auto mt-3 text-lg text-white rounded-lg shadow-md cursor-pointer bg-primary-600 font-sans-bb h-3/4 hover:shadow-xl"
+            className="p-2 px-3 mx-auto mt-3 text-lg text-white rounded-lg shadow-md cursor-pointer bg-primary-600 font-sans-bb h-3/4 hover:bg-primary-700"
           />
         </form>
       </div>

@@ -16,9 +16,9 @@ export default function HandList({ listData }) {
       <ul className="space-y-6">
         {listData.map((item, index) => {
           return (
-            <div style={listStyle}>
+            <div className="text-md" style={listStyle}>
               <span className="handwriting w-[50px] text-right text-primary-600">{getNum(index)}</span>
-              <li className="ml-3 font-sans text-md">{item}</li>
+              <li className="ml-3 font-sans ">{item}</li>
             </div>
           );
         })}
