@@ -14,7 +14,7 @@ export default function ContactForm() {
   return (
     <>
       <div className="flex flex-col items-center justify-around w-full h-auto p-4 shadow-xl bg-primary-600 rounded-xl">
-        <form className="flex flex-col items-center justify-between w-11/12 max-w-[600px] ">
+        <form className="flex flex-col mt-2 items-center justify-between w-11/12 max-w-[600px] ">
           <div className="flex flex-col w-full md:flex-row">
             <FormField type="text" name="name" placeholder="name" className="ml-0 mr-0 md:mr-2 md:w-2/5 h-[40px]" />
             <FormField type="text" name="email" placeholder="email" className="md:w-3/5 h-[40px] mr-0 ml-0 md:ml-2" />
