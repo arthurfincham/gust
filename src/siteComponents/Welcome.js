@@ -21,7 +21,7 @@ export default function Welcome() {
           Get Started
         </a>
         <a
-          className="p-2 m-2 text-xl text-primary-600 bg-white rounded-md shadow-lg hover:cursor-pointer  shadow-indigo-200/50 border-[0.01em] hover:shadow-xl font-sans-b"
+          className="p-2 m-2 text-xl text-primary-600 bg-white rounded-md shadow-md hover:cursor-pointer  border-[0.01em] hover:shadow-xl font-sans-b"
           href="/components"
           data-testid="componentsButton"
         >

@@ -4,6 +4,8 @@ import useMeasure from 'react-use-measure';
 import React, { useState, useRef } from 'react';
 import Brackets from '../svgs/Brackets';
 import useForceUpdate from 'use-force-update';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import gustCodeTheme from './gustCodeTheme';
 
 export default function Wrapper({ compChild, title, myCode, renderButton = false }) {
   const [code, setCode] = useState('');
@@ -51,7 +53,9 @@ export default function Wrapper({ compChild, title, myCode, renderButton = false
 
         <animated.div style={collapse} className="w-full rounded-xl bg-gray-50">
           <div ref={ref} className="w-full p-2 rounded-xl">
-            <CodeBlock showLineNumbers={false} text={code} theme={atomOneLight} language="jsx" wrapLines />
+            <SyntaxHighlighter language="jsx" style={gustCodeTheme}>
+              {code}
+            </SyntaxHighlighter>
           </div>
         </animated.div>
       </div>
