@@ -12,7 +12,7 @@ export default function Navbar() {
         <div className="flex items-center w-full navContent">
           <GustIcon svgClass="fill-primary-600 h-[40px]" />
           <div className="flex justify-end w-full ml-6 space-x-4 ">
-            <NavLink exact activeclassname="active" className="mx-2 mt-1 bg-white rounded-md text-md hover:cursor-pointer font-sans-bb" to="/">
+            <NavLink activeclassname="active" className="mx-2 mt-1 bg-white rounded-md text-md hover:cursor-pointer font-sans-bb" to="/">
               Home
             </NavLink>
 

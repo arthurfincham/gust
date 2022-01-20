@@ -2,9 +2,8 @@ import Welcome from './siteComponents/Welcome';
 import Navbar from './siteComponents/Navbar';
 import Components from './siteComponents/Components';
 import Documentation from './siteComponents/Documentation';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { AnimatedSwitch } from 'react-router-transition';
 
 function App() {
   const [isClosed, setIsClosed] = useState(true);
@@ -22,17 +21,15 @@ function App() {
       <div className="App scroll-smooth">
         <Navbar setIsClosed={setIsClosed} isClosed={isClosed} />
         <main>
-          <Switch>
-            <Route key={1} exact path="/">
-              <Welcome />
-            </Route>
-            <Route key={2} path="/components">
-              <Components isClosed={isClosed} windowWidth={windowWidth} setIsClosed={setIsClosed} />
-            </Route>
-            <Route key={3} path="/documentation">
-              <Documentation isClosed={isClosed} windowWidth={windowWidth} setIsClosed={setIsClosed} />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route key={1} path="/" element={<Welcome />} />
+            <Route key={2} path="/components" element={<Components isClosed={isClosed} windowWidth={windowWidth} setIsClosed={setIsClosed} />} />
+            <Route
+              key={3}
+              path="/documentation"
+              element={<Documentation isClosed={isClosed} windowWidth={windowWidth} setIsClosed={setIsClosed} />}
+            />
+          </Routes>
         </main>
       </div>
     </Router>
