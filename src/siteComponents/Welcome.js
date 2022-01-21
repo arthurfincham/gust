@@ -14,23 +14,23 @@ export default function Welcome() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-start w-full h-full">
-      <div className="mt-12 flex flex-col items-center justify-between w-[80%] md:flex-row space-y-4 mb-4">
-        <div className="flex justify-center w-full h-auto h-full md:w-1/2 ">
-          <LogoText svgClass="fill-black w-5/6 max-w-[350px]" />
+    <div className="flex flex-col items-center justify-start w-full h-full mt-[50px]">
+      <div className="mt-12 flex flex-col items-center justify-between w-[100%] sm:flex-row space-y-4 mb-2  md:ml-24 ">
+        <div className="flex justify-center w-full h-auto h-full sm:w-1/2 ">
+          <LogoText svgClass="fill-black w-5/6 max-w-[350px] lg:max-w-[400px]" />
         </div>
-        <ul className="w-auto my-auto space-y-2 md:w-1/2 ">
+        <ul className="w-auto my-auto space-y-2 sm:w-1/2 ">
           {points.map((item) => {
             return (
               <div className="flex items-center">
                 {arrow()}
-                <li className="ml-3 text-2xl font-sans-b">{item}</li>
+                <li className="ml-3 text-2xl sm:text-xl md:text-2xl font-sans-b">{item}</li>
               </div>
             );
           })}
         </ul>
       </div>
-      <img width="80%" height="80%" src={gustBanner} alt="gust button" />
+      <img width="100%" height="100%" src={gustBanner} alt="gust button" />
     </div>
   );
 }
