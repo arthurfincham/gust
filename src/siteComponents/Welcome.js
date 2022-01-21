@@ -1,5 +1,6 @@
 import LogoText from '../svgs/LogoText';
 import gustBanner from '../svgs/gustBanner.svg';
+import gustBannerMob from '../svgs/gustBannerMob.svg';
 import ArrowList from '../pubComponents/ArrowList';
 export default function Welcome() {
   const points = ['React and Tailwind CSS', 'Responsive components', 'No install'];
@@ -30,7 +31,8 @@ export default function Welcome() {
           })}
         </ul>
       </div>
-      <img width="100%" height="100%" src={gustBanner} alt="gust button" />
+      <img width="100%" height="100%" src={gustBanner} alt="gust button" className="hidden md:block" />
+      <img width="80%" height="80%" src={gustBannerMob} alt="gust button" className="md:hidden" />
     </div>
   );
 }
