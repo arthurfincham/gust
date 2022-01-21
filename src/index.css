@@ -208,3 +208,27 @@ main {
 .switch-wrapper > div {
   position: absolute;
 }
+
+pre {
+  border-radius: 0 0 10px 10px !important;
+
+  padding: 10px 0 0 0 !important;
+  overflow: hidden !important;
+}
+
+pre > ::-webkit-scrollbar {
+  height: 12px;
+}
+
+pre > ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+pre > ::-webkit-scrollbar-thumb {
+  background: #d3d3d3;
+  border-radius: 10px;
+}
+
+pre > ::-webkit-scrollbar-thumb:hover {
+  background: #d3d3d3;
+}

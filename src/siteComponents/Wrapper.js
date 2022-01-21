@@ -1,9 +1,7 @@
-import { CodeBlock, atomOneLight } from 'react-code-blocks';
 import { useSpring, animated } from 'react-spring';
 import useMeasure from 'react-use-measure';
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import Brackets from '../svgs/Brackets';
-import useForceUpdate from 'use-force-update';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import gustCodeTheme from './gustCodeTheme';
 
@@ -31,6 +29,14 @@ export default function Wrapper({ compChild, title, myCode, renderButton = false
     opacity: isCollapsed ? 0 : 1,
   });
 
+  const codeBlockStyle = {
+    padding: '1em',
+  };
+
+  const compWrapperStyle = () => {
+    return isCollapsed ? { borderRadius: '0 0 10px 10px' } : { borderRadius: '0 0 0 0' };
+  };
+
   return (
     <div className="flex  flex-col border-[.05em] items-center w-5/6 my-6 rounded-xl shadow-sm">
       <div className="flex flex-col min-h-[100px] w-full justify-start bg-white h-full rounded-xl">
@@ -47,13 +53,16 @@ export default function Wrapper({ compChild, title, myCode, renderButton = false
           </button>
         </div>
 
-        <div className="flex items-center justify-center z-0 bg-gray-200 min-h-[200px] rounded-b-xl p-4 overflow-hidden componentWrappingBox">
+        <div
+          style={compWrapperStyle()}
+          className="flex items-center justify-center z-0 bg-gray-200 min-h-[200px]  p-4 overflow-hidden componentWrappingBox"
+        >
           {compChild}
         </div>
 
-        <animated.div style={collapse} className="w-full rounded-xl bg-gray-50">
-          <div ref={ref} className="w-full p-2 rounded-xl">
-            <SyntaxHighlighter language="jsx" style={gustCodeTheme}>
+        <animated.div style={collapse} className="w-full bg-gray-200 rounded-b-xl">
+          <div ref={ref} className="w-full rounded-b-xl">
+            <SyntaxHighlighter customStyle={codeBlockStyle} language="jsx" style={gustCodeTheme}>
               {code}
             </SyntaxHighlighter>
           </div>
