@@ -17,14 +17,9 @@ describe('App components render', () => {
     expect(screen.getByTestId('navigation')).toBeInTheDocument();
   });
 
-  test('Get Started button', () => {
+  test('App preview banner', () => {
     render(<App />);
-    expect(screen.getByTestId('getStartedButton')).toBeInTheDocument();
-  });
-
-  test('Components button', () => {
-    render(<App />);
-    expect(screen.getByTestId('componentsButton')).toBeInTheDocument();
+    expect(screen.getByTestId('desktopAppBanner')).toBeInTheDocument();
   });
 
   // test('clears if a correct name is entered', () => {
