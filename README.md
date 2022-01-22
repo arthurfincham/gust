@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/GustIconBlue.svg" width="200">
+<img src="public/GustREADME.svg" width="auto">
 
 # [Gust](https://gust-six.vercel.app/)
 
