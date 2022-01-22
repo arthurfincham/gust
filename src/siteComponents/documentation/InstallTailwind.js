@@ -1,4 +1,5 @@
 import DocCodeBlock from '../DocCodeBlock';
+
 export default function InstallTailwind() {
   const configFile = `// ./tailwing.config.js
   
@@ -31,8 +32,8 @@ module.exports = {
         </a>
         .
       </p>
-      <DocCodeBlock lang="shell">npm install -D tailwindcss</DocCodeBlock>
-      <DocCodeBlock lang="shell">npx tailwindcss init</DocCodeBlock>
+      <DocCodeBlock lang="bash">npm install -D tailwindcss</DocCodeBlock>
+      <DocCodeBlock lang="bash">npx tailwindcss init</DocCodeBlock>
       <p>This will create a config file in the root of your directory.</p>
       <DocCodeBlock lang="javascript">{configFile}</DocCodeBlock>
       <p>Then import the required Tailwind files in your css.</p>

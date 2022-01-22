@@ -2,8 +2,10 @@ import { useSpring, animated } from 'react-spring';
 import useMeasure from 'react-use-measure';
 import React, { useState } from 'react';
 import Brackets from '../svgs/Brackets';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { gustCodeTheme } from './gustCodeTheme';
+import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
+SyntaxHighlighter.registerLanguage('jsx', jsx);
 
 export default function Wrapper({ compChild, title, myCode, renderButton = false }) {
   const [code, setCode] = useState('');
