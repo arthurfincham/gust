@@ -26,21 +26,21 @@ export default function Welcome() {
     <div className="flex flex-col items-center justify-start w-full h-full mt-[50px]">
       <div className="mt-12 flex flex-col items-center justify-center w-[100%] sm:flex-row space-y-12 sm:space-y-0 sm:space-x-[5vw] mb-2 ">
         <ul className="w-2/3 my-auto space-y-4 sm:w-auto">
-          {points.map((item) => {
+          {points.map((item, index) => {
             return (
-              <div className="flex items-center">
+              <div key={index} className="flex items-center">
                 {tick()}
-                <li className="ml-3 text-2xl sm:text-xl md:text-3xl font-sans-b">{item}</li>
+                <li className="ml-3 text-3xl font-bold tracking-wide sm:text-2xl md:text-4xl lg:text-5xl font-hand">{item}</li>
               </div>
             );
           })}
         </ul>
         <ul className="w-2/3 my-auto space-y-4 sm:w-auto">
-          {crossPoints.map((item) => {
+          {crossPoints.map((item, index) => {
             return (
-              <div className="flex items-center">
+              <div key={index} className="flex items-center">
                 {cross()}
-                <li className="ml-3 font-sans text-2xl text-gray-500 line-through decoration-[3px] decoration-black sm:text-xl md:text-3xl">
+                <li className="ml-3  tracking-wide  text-3xl sm:text-2xl md:text-4xl lg:text-5xl  font-hand   line-through decoration-[3px] decoration-black">
                   {item}
                 </li>
               </div>
