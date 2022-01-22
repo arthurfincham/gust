@@ -1,4 +1,4 @@
-export default {
+export const gustCodeTheme = {
   'code[class*="language-"]': {
     color: '#4D45E6',
     background: 'none',
