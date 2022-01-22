@@ -1,6 +1,6 @@
-import LogoText from '../svgs/LogoText';
 import gustBanner from '../svgs/gustBanner.svg';
 import gustBannerMob from '../svgs/gustBannerMob.svg';
+
 export default function Welcome() {
   const points = ['React and Tailwind CSS', 'Responsive components', 'No install'];
 

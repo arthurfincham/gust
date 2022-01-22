@@ -15,7 +15,7 @@ export default function Waves() {
   return (
     <SectionWrapper>
       <Wrapper compChild={<GentleWaves>{waveChildren}</GentleWaves>} title="Gentle Waves" myCode={gwText} />
-      <Wrapper compChild={<HeavyWaves>{waveChildren}</HeavyWaves>} title="Heavy Waves" myCode={gwText} />
+      <Wrapper compChild={<HeavyWaves>{waveChildren}</HeavyWaves>} title="Heavy Waves" myCode={hwText} />
     </SectionWrapper>
   );
 }

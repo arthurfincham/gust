@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { useSpring, animated, useTransition } from 'react-spring';
+import { useSpring, animated } from 'react-spring';
 import DocNav from './DocNav';
 import GettingStarted from './documentation/GettingStarted';
 import UsingComponents from './documentation/UsingComponents';
+
 export default function Documentation({ isClosed, windowWidth, setIsClosed }) {
   const gettingStarted = { id: 1, name: 'Getting Started', doc: <GettingStarted /> };
   const usingComponents = { id: 5, name: 'Components', doc: <UsingComponents /> };
