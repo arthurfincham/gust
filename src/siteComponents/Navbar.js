@@ -1,4 +1,4 @@
-import GustIcon from '../svgs/GustIcon';
+import LogoText from '../svgs/LogoText';
 import { NavLink } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
@@ -10,7 +10,7 @@ export default function Navbar() {
     <>
       <nav className={`bg-white w-full h-[50px]  px-4 w-full  flex justify-center ${navShadow} fixed`} data-testid="navigation">
         <div className="flex items-center w-full navContent">
-          <GustIcon svgClass="fill-primary-600 h-[40px]" />
+          <LogoText svgClass="fill-primary-600 h-[35px]" />
           <div className="flex justify-end w-full ml-6 space-x-4 ">
             <NavLink activeclassname="active" className="mx-2 mt-1 bg-white rounded-md text-md hover:cursor-pointer font-sans-bb" to="/">
               Home

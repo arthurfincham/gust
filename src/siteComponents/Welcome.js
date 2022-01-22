@@ -1,37 +1,54 @@
 import LogoText from '../svgs/LogoText';
 import gustBanner from '../svgs/gustBanner.svg';
 import gustBannerMob from '../svgs/gustBannerMob.svg';
-import ArrowList from '../pubComponents/ArrowList';
 export default function Welcome() {
   const points = ['React and Tailwind CSS', 'Responsive components', 'No install'];
 
-  const arrow = () => {
+  const crossPoints = ['Deprecated dependencies', 'Bloated packages', 'Confusing props'];
+
+  const tick = () => {
     return (
-      <svg height="26px" width="30px" className="fill-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.71 16.67">
-        <path d="M40.72,8.08h0c-14.9-.5-27-.66-38-.48a.91.91,0,0,0-.78,1,.86.86,0,0,0,.76.95c11-.18,23.09,0,38,.48a.88.88,0,0,0,.81-.93A.89.89,0,0,0,40.72,8.08Z" />
-        <path d="M33.78,15.18a1,1,0,0,1-.49-1.88c1.25-.69,2.49-1.46,3.69-2.2l1.63-1c.31-.18.7-.39,1.12-.6s.61-.31.9-.48A18.9,18.9,0,0,0,38,7.65a16.84,16.84,0,0,1-1.64-.8l-.3-.17a20.2,20.2,0,0,1-5-3.52A1,1,0,1,1,32.58,1.8,19,19,0,0,0,37.07,5l.3.17a16.19,16.19,0,0,0,1.48.71c1.54.71,3.3,1.5,4.21,2.72a1,1,0,0,1-.17,1.37,13,13,0,0,1-2.25,1.35c-.37.19-.72.37-1,.54L38,12.8c-1.22.76-2.48,1.54-3.77,2.25A.94.94,0,0,1,33.78,15.18Z" />
+      <svg className="w-[2em]  h-[2em]" width="100" height="100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <path d="M18.16,46.5a5.32,5.32,0,1,0-6.24,8.61c8.29,6,15.07,15.37,20.63,27.71a5.32,5.32,0,0,0,9.67.06C53.07,59.54,68.79,37,87.63,20.86a5.32,5.32,0,0,0-6.91-8.08c-17.5,15-32.3,34.88-43.38,56C32,59.45,25.69,52,18.16,46.5Z" />
+      </svg>
+    );
+  };
+
+  const cross = () => {
+    return (
+      <svg className="w-[2em]  h-[2em]" width="100" height="100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <path d="M77.74,20.38A168.64,168.64,0,0,0,50.62,38.26c-7.06-8.72-14.21-17.37-22.06-25.4-5.71-5.84-14.67,3.12-9,9,7.55,7.73,14.45,16,21.24,24.4C30.65,54.72,20.65,63.51,9.78,71.28,3.2,76,9.52,87,16.17,82.22,27.53,74.11,38,64.82,48.72,55.93A325.51,325.51,0,0,0,72.1,82.49c5.79,5.75,14.76-3.2,9-9A320.38,320.38,0,0,1,58.54,48a164.89,164.89,0,0,1,25.6-16.71c7.26-3.72.86-14.65-6.4-10.94Z" />
       </svg>
     );
   };
 
   return (
     <div className="flex flex-col items-center justify-start w-full h-full mt-[50px]">
-      <div className="mt-12 flex flex-col items-center justify-between w-[100%] sm:flex-row space-y-4 mb-2  md:ml-24 ">
-        <div className="flex justify-center w-full h-auto h-full sm:w-1/2 ">
-          <LogoText svgClass="fill-black w-5/6 max-w-[350px] lg:max-w-[400px]" />
-        </div>
-        <ul className="w-auto my-auto space-y-2 sm:w-1/2 ">
+      <div className="mt-12 flex flex-col items-center justify-center w-[100%] sm:flex-row space-y-12 sm:space-y-0 sm:space-x-[5vw] mb-2 ">
+        <ul className="w-2/3 my-auto space-y-4 sm:w-auto">
           {points.map((item) => {
             return (
               <div className="flex items-center">
-                {arrow()}
-                <li className="ml-3 text-2xl sm:text-xl md:text-2xl font-sans-b">{item}</li>
+                {tick()}
+                <li className="ml-3 text-2xl sm:text-xl md:text-3xl font-sans-b">{item}</li>
+              </div>
+            );
+          })}
+        </ul>
+        <ul className="w-2/3 my-auto space-y-4 sm:w-auto">
+          {crossPoints.map((item) => {
+            return (
+              <div className="flex items-center">
+                {cross()}
+                <li className="ml-3 font-sans text-2xl text-gray-500 line-through decoration-[3px] decoration-black sm:text-xl md:text-3xl">
+                  {item}
+                </li>
               </div>
             );
           })}
         </ul>
       </div>
-      <img width="100%" height="100%" src={gustBanner} alt="gust button" className="hidden md:block" />
+      <img width="90%" height="90%" src={gustBanner} alt="gust button" className="hidden md:block" />
       <img width="80%" height="80%" src={gustBannerMob} alt="gust button" className="md:hidden" />
     </div>
   );
