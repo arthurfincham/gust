@@ -1,4 +1,3 @@
-import { CodeBlock, atomOneLight } from 'react-code-blocks';
 import DocCodeBlock from '../siteComponents/DocCodeBlock';
 import { useSpring, animated } from 'react-spring';
 import useMeasure from 'react-use-measure';

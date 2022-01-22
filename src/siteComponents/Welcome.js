@@ -24,7 +24,7 @@ export default function Welcome() {
 
   return (
     <div className="flex flex-col items-center justify-start w-full h-full mt-[50px]">
-      <div className="mt-12 flex flex-col items-center justify-center w-[100%] sm:flex-row space-y-12 sm:space-y-0 sm:space-x-[5vw] mb-2 ">
+      <div className="mt-12 flex flex-col items-center justify-center w-[100%] sm:flex-row space-y-12 sm:space-y-0 sm:space-x-[5vw] mb-6 ">
         <ul className="w-2/3 my-auto space-y-4 sm:w-auto">
           {points.map((item, index) => {
             return (
