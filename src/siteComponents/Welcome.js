@@ -48,7 +48,7 @@ export default function Welcome() {
           })}
         </ul>
       </div>
-      <img width="90%" height="90%" src={gustBanner} alt="gust button" className="hidden md:block" />
+      <img data-testid="desktopAppBanner" width="90%" height="90%" src={gustBanner} alt="gust button" className="hidden md:block" />
       <img width="80%" height="80%" src={gustBannerMob} alt="gust button" className="md:hidden" />
     </div>
   );

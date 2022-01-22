@@ -11,9 +11,9 @@ export default function ArrowList({ listData }) {
   return (
     <div className="flex flex-col justify-center items-center w-3/4 h-[500px] p-1  bg-white rounded-xl shadow-xl relative text-2xl">
       <ul className="space-y-6">
-        {listData.map((item) => {
+        {listData.map((item, index) => {
           return (
-            <div className="flex items-center">
+            <div key={index} className="flex items-center">
               {arrow()}
               <li className="ml-3 font-sans text-md">{item}</li>
             </div>
