@@ -1,4 +1,4 @@
-import { CodeBlock, atomOneLight } from 'react-code-blocks';
+import DocCodeBlock from '../siteComponents/DocCodeBlock';
 import { useSpring, animated } from 'react-spring';
 import useMeasure from 'react-use-measure';
 import React, { useState } from 'react';
@@ -66,7 +66,7 @@ export default function HorizontalProgress({ min, max, value }) {
     <div className="flex  flex-col border-[.05em] items-center w-5/6 my-6 rounded-xl shadow-sm">
       <div className="flex flex-col min-h-[50px] w-full justify-start bg-white h-full rounded-xl">
         <div className="relative z-10 flex flex-row items-center justify-between w-full px-2 pt-1 shadow-lg sm:px-4 shadow-gray-200/50">
-          <h3 className="ml-1 sm:ml-0 font-sans">Horizontal Progress</h3>
+          <h3 className="ml-1 font-sans sm:ml-0">Horizontal Progress</h3>
           <button
             onClick={() => handleClick()}
             type="button"
@@ -85,7 +85,7 @@ export default function HorizontalProgress({ min, max, value }) {
 
         <animated.div style={collapse} className="w-full rounded-xl bg-gray-50">
           <div ref={ref} className="w-full p-2 rounded-xl">
-            <CodeBlock showLineNumbers={false} text={code} theme={atomOneLight} language="jsx" wrapLines />
+            <DocCodeBlock lang="jsx">{code}</DocCodeBlock>
           </div>
         </animated.div>
       </div>
