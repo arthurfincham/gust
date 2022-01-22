@@ -17,7 +17,7 @@ module.exports = {
   plugins: [],
 };`;
 
-  const imports = `// ./src/index.css
+  const imports = `/* ./src/index.css */
 
 @tailwind base;
 @tailwind components;
@@ -37,7 +37,7 @@ module.exports = {
       <p>This will create a config file in the root of your directory.</p>
       <DocCodeBlock lang="javascript">{configFile}</DocCodeBlock>
       <p>Then import the required Tailwind files in your css.</p>
-      <DocCodeBlock lang="javascript">{imports}</DocCodeBlock>
+      <DocCodeBlock lang="css">{imports}</DocCodeBlock>
       <br></br>
     </div>
   );
