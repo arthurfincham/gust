@@ -1,4 +1,4 @@
-import DocCodeBlock from './DocCodeBlock';
+import DocCodeBlock from './docComponents/DocCodeBlock';
 
 export default function InstallTailwind() {
   const configFile = `// ./tailwing.config.js

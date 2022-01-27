@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
-import DocNav from './DocNav';
+import DocNav from './docComponents/DocNav';
 import GettingStarted from './GettingStarted';
 import UsingComponents from './UsingComponents';
 
