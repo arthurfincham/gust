@@ -6,11 +6,13 @@ import Text from './Text';
 import Lists from './Lists';
 import Forms from './Forms';
 import Waves from './Waves';
+import Cards from './Cards';
 
 export default function AllComponents() {
   return (
     <div className="flex flex-col items-center w-full">
       <Buttons />
+      <Cards />
       <DataDisplay />
       <Forms />
       <Lists />

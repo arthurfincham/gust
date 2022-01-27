@@ -17,9 +17,9 @@
     "web-vitals": "^2.1.3"
   },
   "scripts": {
-    "prestart": "node src/preBuild.js",
-    "pretest": "node src/preBuild.js",
-    "prebuild": "node src/preBuild.js",
+    "prestart": "node src/utils/preBuildScript.js",
+    "pretest": "node src/utils/preBuildScript.js",
+    "prebuild": "node src/utils/preBuildScript.js",
     "start": " react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

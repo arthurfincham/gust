@@ -1,4 +1,4 @@
-import DummyBar from '../../pubComponents/DummyBar';
+import DummyBar from '../pubComponents/DummyBar';
 
 export default function UsingComponents() {
   return (

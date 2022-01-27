@@ -1,4 +1,4 @@
-import DocCodeBlock from '../siteComponents/DocCodeBlock';
+import DocCodeBlock from '../documentation/DocCodeBlock';
 import { useSpring, animated } from 'react-spring';
 import useMeasure from 'react-use-measure';
 import React, { useState } from 'react';

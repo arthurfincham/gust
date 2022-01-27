@@ -1,4 +1,4 @@
-import DocCodeBlock from '../DocCodeBlock';
+import DocCodeBlock from './DocCodeBlock';
 
 export default function CustomFonts() {
   const folderStructure = `

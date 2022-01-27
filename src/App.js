@@ -1,7 +1,7 @@
 import Welcome from './siteComponents/Welcome';
 import Navbar from './siteComponents/Navbar';
 import Components from './siteComponents/Components';
-import Documentation from './siteComponents/Documentation';
+import Documentation from './documentation/Documentation';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import useGoogleAnalytics from './utils/useGoogleAnalytics';
