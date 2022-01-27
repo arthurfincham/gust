@@ -4,6 +4,7 @@ import useMeasure from 'react-use-measure';
 import React, { useState } from 'react';
 import Brackets from '../../svgs/Brackets';
 
+import React from 'react';
 export default function DummyBar({ min, max, value }) {
   const current = Math.ceil((value / (max - min)) * 100);
 
@@ -29,8 +30,13 @@ export default function DummyBar({ min, max, value }) {
   const component = (
     <div className="w-2/3 h-[90px] bg-white shadow-xl rounded-xl flex items-center justify-center">
       <div className="mb-6 h-[20px] w-[90%] bg-primary-100 relative shadow-sm  my-auto rounded-xl ">
-        <div style={progressStyle} className="h-[20px] rounded-l-xl bg-primary-600 absolute">
-          <span className="absolute top-[-30px] text-center w-[10px] text-2xl handwriting right-[-1px]">{current}%</span>
+        <div
+          style={progressStyle}
+          className="h-[20px] rounded-l-xl bg-primary-600 absolute"
+        >
+          <span className="absolute top-[-30px] text-center w-[10px] text-2xl handwriting right-[-1px]">
+            {current}%
+          </span>
         </div>
       </div>
     </div>
@@ -43,6 +49,7 @@ export default function DummyBar({ min, max, value }) {
   };
 
   const code = `
+import React from 'react'
 export default function HorizontalProgress({ min, max, value }) {
   const current = Math.ceil((value / (max - min)) * 100);
 
@@ -81,7 +88,9 @@ export default function HorizontalProgress({ min, max, value }) {
           </button>
         </div>
 
-        <div className="flex items-center justify-center z-0 bg-gray-200 min-h-[100px] rounded-b-xl  componentWrappingBox py-2">{component}</div>
+        <div className="flex items-center justify-center z-0 bg-gray-200 min-h-[100px] rounded-b-xl  componentWrappingBox py-2">
+          {component}
+        </div>
 
         <animated.div style={collapse} className="w-full rounded-xl bg-gray-50">
           <div ref={ref} className="w-full p-2 rounded-xl">

@@ -4,11 +4,24 @@ import DocNav from './docComponents/DocNav';
 import GettingStarted from './GettingStarted';
 import UsingComponents from './UsingComponents';
 
+import React from 'react';
 export default function Documentation({ isClosed, windowWidth, setIsClosed }) {
-  const gettingStarted = { id: 1, name: 'Getting Started', doc: <GettingStarted /> };
-  const usingComponents = { id: 5, name: 'Components', doc: <UsingComponents /> };
+  const gettingStarted = {
+    id: 1,
+    name: 'Getting Started',
+    doc: <GettingStarted />,
+  };
+  const usingComponents = {
+    id: 5,
+    name: 'Components',
+    doc: <UsingComponents />,
+  };
 
-  const [liveDoc, setLiveDoc] = useState({ id: 1, name: 'Getting Started', doc: <GettingStarted /> });
+  const [liveDoc, setLiveDoc] = useState({
+    id: 1,
+    name: 'Getting Started',
+    doc: <GettingStarted />,
+  });
 
   const renderComp = () => {
     return liveDoc.doc;
@@ -16,15 +29,17 @@ export default function Documentation({ isClosed, windowWidth, setIsClosed }) {
 
   const collapse = useSpring({
     duration: 100,
-    transform: isClosed && windowWidth <= 768 ? 'translateX(-150px)' : 'translateX(0px)',
+    transform:
+      isClosed && windowWidth <= 768 ? 'translateX(-150px)' : 'translateX(0px)',
   });
 
   const mainCollapse = useSpring({
     duration: 100,
-    transform: !isClosed && windowWidth <= 768 ? 'translateX(150px)' : 'translateX(0px)',
+    transform:
+      !isClosed && windowWidth <= 768 ? 'translateX(150px)' : 'translateX(0px)',
   });
 
-  const listStyle = (type) => {
+  const listStyle = type => {
     if (type.id === liveDoc.id) {
       return {
         color: '#5046E5',
@@ -36,7 +51,10 @@ export default function Documentation({ isClosed, windowWidth, setIsClosed }) {
     <div className="h-full sm:overflow-y-scroll md:overflow-auto componentsWrapper scroll-smooth">
       <DocNav isClosed={isClosed} setIsClosed={setIsClosed} liveDoc={liveDoc} />
       <div className="flex w-full h-full mt-[20px] md:mt-[50px]">
-        <animated.ul style={collapse} className="flex flex-col  w-[150px] fixed h-full mt-[20px] pl-4 lg:pl-0 whitespace-nowrap">
+        <animated.ul
+          style={collapse}
+          className="flex flex-col  w-[150px] fixed h-full mt-[20px] pl-4 lg:pl-0 whitespace-nowrap"
+        >
           <li
             style={listStyle(gettingStarted)}
             className="w-full px-3 py-1 cursor-pointer font-sans-b text-md"
@@ -44,13 +62,22 @@ export default function Documentation({ isClosed, windowWidth, setIsClosed }) {
           >
             Getting Started
           </li>
-          <a className="w-full px-3 py-1 ml-4 cursor-pointer font-sans-b text-md" href="#setUpTailwind">
+          <a
+            className="w-full px-3 py-1 ml-4 cursor-pointer font-sans-b text-md"
+            href="#setUpTailwind"
+          >
             Set Up Tailwind
           </a>
-          <a className="w-full px-3 py-1 ml-4 cursor-pointer font-sans-b text-md" href="#customColors">
+          <a
+            className="w-full px-3 py-1 ml-4 cursor-pointer font-sans-b text-md"
+            href="#customColors"
+          >
             Colors
           </a>
-          <a className="w-full px-3 py-1 ml-4 cursor-pointer font-sans-b text-md" href="#customFonts">
+          <a
+            className="w-full px-3 py-1 ml-4 cursor-pointer font-sans-b text-md"
+            href="#customFonts"
+          >
             Fonts
           </a>
           <li
@@ -62,7 +89,10 @@ export default function Documentation({ isClosed, windowWidth, setIsClosed }) {
           </li>
         </animated.ul>
 
-        <animated.div style={mainCollapse} className="flex flex-col md:ml-[150px] items-center w-full ">
+        <animated.div
+          style={mainCollapse}
+          className="flex flex-col md:ml-[150px] items-center w-full "
+        >
           <div className="md:mt-[20px] w-2/3">{renderComp()}</div>
         </animated.div>
       </div>

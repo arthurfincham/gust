@@ -35,6 +35,7 @@ const ThirdTab = () => {
   );
 };
 
+import React from 'react'
 export default function TabCard() {
   const [liveTab, setLiveTab] = useState(<FirstTab />);
 

@@ -1,3 +1,4 @@
+import React from 'react';
 export default function ContactFormTitled() {
   const FormField = ({ type, name, placeholder, className }) => {
     return (
@@ -14,11 +15,23 @@ export default function ContactFormTitled() {
   return (
     <>
       <div className="flex flex-col items-center justify-around w-full h-auto p-4 shadow-xl bg-primary-600 rounded-xl">
-        <h3 className="mb-2 ml-4 text-4xl text-white text-shadow-md md:text-6xl font-sans-bb">Get in touch.</h3>
+        <h3 className="mb-2 ml-4 text-4xl text-white text-shadow-md md:text-6xl font-sans-bb">
+          Get in touch.
+        </h3>
         <form className="flex flex-col items-center justify-between w-11/12 max-w-[600px] ">
           <div className="flex flex-col w-full md:flex-row">
-            <FormField type="text" name="name" placeholder="name" className="ml-0 mr-0 md:mr-2 md:w-2/5 h-[40px]" />
-            <FormField type="text" name="email" placeholder="email" className="md:w-3/5 h-[40px] mr-0 ml-0 md:ml-2" />
+            <FormField
+              type="text"
+              name="name"
+              placeholder="name"
+              className="ml-0 mr-0 md:mr-2 md:w-2/5 h-[40px]"
+            />
+            <FormField
+              type="text"
+              name="email"
+              placeholder="email"
+              className="md:w-3/5 h-[40px] mr-0 ml-0 md:ml-2"
+            />
           </div>
           <textarea
             className="p-3 my-3 mx-4 placeholder:font-hand placeholder:text-2xl w-full text-lg border-primary-300 roboto-regular  rounded-lg h-[200px] shadow-lg focus:outline-none"

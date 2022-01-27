@@ -1,3 +1,4 @@
+import React from 'react'
 export default function DataIncrease() {
   const data = [
     { label: '2017', value: 55 },

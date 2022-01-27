@@ -1,3 +1,4 @@
+import React from 'react';
 import Progress from './progress/Progress';
 import DataDisplay from './dataDisplay/DataDisplay';
 import Buttons from './buttons/Buttons';

@@ -13,15 +13,40 @@ import siText from './SignInForm.txt';
 import SignUpForm from './SignUpForm';
 import suText from './SignUpForm.txt';
 
+import React from 'react';
 export default function Buttons() {
   return (
     <SectionWrapper>
-      <Wrapper compChild={<ContactForm />} title="Contact Form" myCode={cfText} />
-      <Wrapper compChild={<ContactFormTitled />} title="Titled Contact Form" myCode={cftText} />
-      <Wrapper compChild={<NewsletterForm />} title="Newsletter Form" myCode={nfText} />
-      <Wrapper compChild={<NewsletterFormTitled />} title="Titled Newsletter Form" myCode={nftText} />
-      <Wrapper compChild={<SignInForm />} title="Sign In Form" myCode={siText} />
-      <Wrapper compChild={<SignUpForm />} title="Sign Up Form" myCode={suText} />
+      <Wrapper
+        compChild={<ContactForm />}
+        title="Contact Form"
+        myCode={cfText}
+      />
+      <Wrapper
+        compChild={<ContactFormTitled />}
+        title="Titled Contact Form"
+        myCode={cftText}
+      />
+      <Wrapper
+        compChild={<NewsletterForm />}
+        title="Newsletter Form"
+        myCode={nfText}
+      />
+      <Wrapper
+        compChild={<NewsletterFormTitled />}
+        title="Titled Newsletter Form"
+        myCode={nftText}
+      />
+      <Wrapper
+        compChild={<SignInForm />}
+        title="Sign In Form"
+        myCode={siText}
+      />
+      <Wrapper
+        compChild={<SignUpForm />}
+        title="Sign Up Form"
+        myCode={suText}
+      />
     </SectionWrapper>
   );
 }

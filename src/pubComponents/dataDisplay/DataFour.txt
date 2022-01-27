@@ -1,3 +1,4 @@
+import React from 'react'
 export default function DataFour() {
   const data = [
     { label: 'Repos', value: 88 },

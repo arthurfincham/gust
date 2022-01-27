@@ -1,3 +1,4 @@
+import React from 'react'
 export default function NumberedTimeline() {
   const rowDirection = (item) => {
     if (item.id % 2 === 0) {

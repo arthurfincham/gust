@@ -1,3 +1,4 @@
+import React from 'react'
 export default function CircularProgress({ min, max, value }) {
   const current = Math.ceil((value / (max - min)) * 100);
   const radius = 70;

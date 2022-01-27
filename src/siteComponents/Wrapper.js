@@ -7,12 +7,12 @@ import { gustCodeTheme } from './gustCodeTheme';
 import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
 SyntaxHighlighter.registerLanguage('jsx', jsx);
 
-export default function Wrapper({ compChild, title, myCode, renderButton = false }) {
+export default function Wrapper({ compChild, title, myCode }) {
   const [code, setCode] = useState('');
 
   fetch(myCode)
-    .then((r) => r.text())
-    .then((text) => {
+    .then(r => r.text())
+    .then(text => {
       setCode(text);
     });
 
@@ -36,7 +36,9 @@ export default function Wrapper({ compChild, title, myCode, renderButton = false
   };
 
   const compWrapperStyle = () => {
-    return isCollapsed ? { borderRadius: '0 0 10px 10px' } : { borderRadius: '0 0 0 0' };
+    return isCollapsed
+      ? { borderRadius: '0 0 10px 10px' }
+      : { borderRadius: '0 0 0 0' };
   };
 
   return (
@@ -62,9 +64,16 @@ export default function Wrapper({ compChild, title, myCode, renderButton = false
           {compChild}
         </div>
 
-        <animated.div style={collapse} className="w-full bg-gray-200 rounded-b-xl">
+        <animated.div
+          style={collapse}
+          className="w-full bg-gray-200 rounded-b-xl"
+        >
           <div ref={ref} className="w-full rounded-b-xl">
-            <SyntaxHighlighter customStyle={codeBlockStyle} language="jsx" style={gustCodeTheme}>
+            <SyntaxHighlighter
+              customStyle={codeBlockStyle}
+              language="jsx"
+              style={gustCodeTheme}
+            >
               {code}
             </SyntaxHighlighter>
           </div>

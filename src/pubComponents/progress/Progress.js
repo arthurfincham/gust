@@ -7,6 +7,7 @@ import hText from './HorizontalProgress.txt';
 import vText from './VerticalProgress.txt';
 import circText from './CircularProgress.txt';
 
+import React from 'react';
 export default function Progress() {
   const progressProps = {
     min: 0,
@@ -16,9 +17,21 @@ export default function Progress() {
 
   return (
     <SectionWrapper>
-      <Wrapper compChild={<HorizontalProgress {...progressProps} />} title="Horizontal Progress" myCode={hText} />
-      <Wrapper compChild={<VerticalProgress {...progressProps} />} title="Vertical Progress" myCode={vText} />
-      <Wrapper compChild={<CircularProgress {...progressProps} />} title="Circular Progress" myCode={circText} />
+      <Wrapper
+        compChild={<HorizontalProgress {...progressProps} />}
+        title="Horizontal Progress"
+        myCode={hText}
+      />
+      <Wrapper
+        compChild={<VerticalProgress {...progressProps} />}
+        title="Vertical Progress"
+        myCode={vText}
+      />
+      <Wrapper
+        compChild={<CircularProgress {...progressProps} />}
+        title="Circular Progress"
+        myCode={circText}
+      />
     </SectionWrapper>
   );
 }

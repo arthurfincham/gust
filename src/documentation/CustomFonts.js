@@ -1,5 +1,6 @@
 import DocCodeBlock from './docComponents/DocCodeBlock';
 
+import React from 'react';
 export default function CustomFonts() {
   const folderStructure = `
 > src
@@ -81,21 +82,32 @@ module.exports = {
   const fontSized = `<h1 className="text-3xl">Title</h1>
 <p className="text-md">Paragraph</p>`;
   return (
-    <div className="w-full h-auto space-y-4 docWrapper scroll-mt-20" id="customFonts">
+    <div
+      className="w-full h-auto space-y-4 docWrapper scroll-mt-20"
+      id="customFonts"
+    >
       <h2>Fonts</h2>
 
       <p>Gust uses two fonts: a sans serif and a handwriting typeface.</p>
 
       <p>
         Download the Roboto family from Google Fonts{' '}
-        <a className="font-bold underline text-primary-700" href="https://fonts.google.com/specimen/Nanum+Pen+Script" alt="link to Nanum">
+        <a
+          className="font-bold underline text-primary-700"
+          href="https://fonts.google.com/specimen/Nanum+Pen+Script"
+          alt="link to Nanum"
+        >
           here
         </a>
         .
       </p>
       <p>
         Download the Nanum Pen Script family from Google Fonts{' '}
-        <a className="font-bold underline text-primary-700" href="https://fonts.google.com/specimen/Roboto" alt="link to Roboto">
+        <a
+          className="font-bold underline text-primary-700"
+          href="https://fonts.google.com/specimen/Roboto"
+          alt="link to Roboto"
+        >
           here
         </a>
         .
@@ -116,7 +128,11 @@ module.exports = {
       <h2>Font Sizing</h2>
       <p>
         Remember that Tailwind uses{' '}
-        <a className="underline text-primary" href="https://tailwindcss.com/docs/preflight" alt="Preflight Link">
+        <a
+          className="underline text-primary"
+          href="https://tailwindcss.com/docs/preflight"
+          alt="Preflight Link"
+        >
           Preflight
         </a>
         .
@@ -124,11 +140,15 @@ module.exports = {
       <p>This removes default margins and leaves headings unstyled.</p>
       <DocCodeBlock lang="jsx">{fontUnsized}</DocCodeBlock>
       <p>In this example, Heading and Paragraph will be the same size.</p>
-      <p>To change the font size, use Tailwinds classes names like t-shirt sizing.</p>
+      <p>
+        To change the font size, use Tailwinds classes names like t-shirt
+        sizing.
+      </p>
       <DocCodeBlock lang="jsx">{fontSized} </DocCodeBlock>
       <br></br>
       <p>
-        If you would like to use another font, find another from Google or any other source and follow the steps above. I recommend using a font with
+        If you would like to use another font, find another from Google or any
+        other source and follow the steps above. I recommend using a font with
         at least 5 variants.
       </p>
     </div>

@@ -1,5 +1,6 @@
 import DummyBar from './docComponents/DummyBar';
 
+import React from 'react';
 export default function UsingComponents() {
   return (
     <div className="w-full h-auto space-y-4 docWrapper">

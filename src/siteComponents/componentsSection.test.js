@@ -1,3 +1,4 @@
+import React from 'react';
 import Components from './Components';
 import { render, screen, fireEvent, createEvent } from '@testing-library/react';
 

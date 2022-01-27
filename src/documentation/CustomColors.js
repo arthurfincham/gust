@@ -1,5 +1,6 @@
 import DocCodeBlock from './docComponents/DocCodeBlock';
 
+import React from 'react';
 export default function CustomColors() {
   const configFile = `// ./tailwing.config.js
   
@@ -47,31 +48,51 @@ module.exports = {
   ];
 
   return (
-    <div className="w-full h-auto space-y-4 docWrapper scroll-mt-20" id="customColors">
+    <div
+      className="w-full h-auto space-y-4 docWrapper scroll-mt-20"
+      id="customColors"
+    >
       <h2>Colors</h2>
-      <p>By default, Gust uses Tailwind's indigo as the primary color.</p>
+      <p>By default, Gust uses Tailwind&apos;s indigo as the primary color.</p>
       <p>These colors render like so.</p>
       <div className="flex flex-wrap items-center space-y-4 colorPreviewDocs">
-        {themeColors.map((color) => {
+        {themeColors.map((color, index) => {
           return (
-            <div className="flex flex-col items-center justify-center w-[50px] ">
+            <div
+              key={index}
+              className="flex flex-col items-center justify-center w-[50px] "
+            >
               <div className={`w-[50px] h-[50px] rounded-xl ${color}`}></div>
-              <span className="mt-1 text-xs italic roboto-light">{color.replace(/\D/g, '')}</span>
+              <span className="mt-1 text-xs italic roboto-light">
+                {color.replace(/\D/g, '')}
+              </span>
             </div>
           );
         })}
       </div>
-      <p>Add these colors to your Tailwind config. It should now look like this:</p>
-      <DocCodeBlock lang="javascript">{configFile}</DocCodeBlock>
-      <p>To use another color for you project, replace the colors defined in your config file.</p>
       <p>
-        Alternatively, choose a color from Tailwind's selection{' '}
-        <a className="underline text-primary-600" href="https://tailwindcss.com/docs/customizing-colors" alt="Tailwind Colors">
+        Add these colors to your Tailwind config. It should now look like this:
+      </p>
+      <DocCodeBlock lang="javascript">{configFile}</DocCodeBlock>
+      <p>
+        To use another color for you project, replace the colors defined in your
+        config file.
+      </p>
+      <p>
+        Alternatively, choose a color from Tailwind&apos;s selection{' '}
+        <a
+          className="underline text-primary-600"
+          href="https://tailwindcss.com/docs/customizing-colors"
+          alt="Tailwind Colors"
+        >
           here
         </a>
         .
       </p>
-      <p>You can then replace all occurences of primary with the color of your choice.</p>
+      <p>
+        You can then replace all occurences of primary with the color of your
+        choice.
+      </p>
     </div>
   );
 }

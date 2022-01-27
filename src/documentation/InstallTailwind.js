@@ -1,5 +1,6 @@
 import DocCodeBlock from './docComponents/DocCodeBlock';
 
+import React from 'react';
 export default function InstallTailwind() {
   const configFile = `// ./tailwing.config.js
   
@@ -23,11 +24,19 @@ module.exports = {
 @tailwind components;
 @tailwind utilities;`;
   return (
-    <div className="w-full h-auto mt-3 space-y-4 docWrapper scroll-mt-24" id="setUpTailwind">
+    <div
+      className="w-full h-auto mt-3 space-y-4 docWrapper scroll-mt-24"
+      id="setUpTailwind"
+    >
       <h2>Set Up Tailwind</h2>
       <p>
-        To get started, install Tailwind CSS. For more details, visit the Tailwind docs{' '}
-        <a className="underline text-primary-600" href="https://tailwindcss.com/docs/installation" alt="link to tailwind">
+        To get started, install Tailwind CSS. For more details, visit the
+        Tailwind docs{' '}
+        <a
+          className="underline text-primary-600"
+          href="https://tailwindcss.com/docs/installation"
+          alt="link to tailwind"
+        >
           here
         </a>
         .

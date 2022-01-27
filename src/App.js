@@ -3,7 +3,7 @@ import Navbar from './siteComponents/Navbar';
 import Components from './siteComponents/Components';
 import Documentation from './documentation/Documentation';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { React, useState, useEffect } from 'react';
 import useGoogleAnalytics from './utils/useGoogleAnalytics';
 
 function GARoutes() {
@@ -13,7 +13,7 @@ function GARoutes() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    window.addEventListener('resize', (e) => {
+    window.addEventListener('resize', () => {
       setWindowWidth(window.innerWidth);
     });
   }, []);
@@ -24,8 +24,28 @@ function GARoutes() {
       <main>
         <Routes>
           <Route key={1} path="/" element={<Welcome />} />
-          <Route key={2} path="/components" element={<Components isClosed={isClosed} windowWidth={windowWidth} setIsClosed={setIsClosed} />} />
-          <Route key={3} path="/documentation" element={<Documentation isClosed={isClosed} windowWidth={windowWidth} setIsClosed={setIsClosed} />} />
+          <Route
+            key={2}
+            path="/components"
+            element={
+              <Components
+                isClosed={isClosed}
+                windowWidth={windowWidth}
+                setIsClosed={setIsClosed}
+              />
+            }
+          />
+          <Route
+            key={3}
+            path="/documentation"
+            element={
+              <Documentation
+                isClosed={isClosed}
+                windowWidth={windowWidth}
+                setIsClosed={setIsClosed}
+              />
+            }
+          />
         </Routes>
       </main>
     </div>

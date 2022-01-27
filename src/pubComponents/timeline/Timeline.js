@@ -4,11 +4,20 @@ import VerticalTimeline from './VerticalTimeline';
 import vtText from './VerticalTimeline.txt';
 import NumberedTimeline from './NumberedTimeline';
 import ntText from './NumberedTimeline.txt';
+import React from 'react';
 export default function Timeline() {
   return (
     <SectionWrapper>
-      <Wrapper compChild={<VerticalTimeline />} title="Dated Timeline" myCode={vtText} />
-      <Wrapper compChild={<NumberedTimeline />} title="Numbered Timeline" myCode={ntText} />
+      <Wrapper
+        compChild={<VerticalTimeline />}
+        title="Dated Timeline"
+        myCode={vtText}
+      />
+      <Wrapper
+        compChild={<NumberedTimeline />}
+        title="Numbered Timeline"
+        myCode={ntText}
+      />
     </SectionWrapper>
   );
 }

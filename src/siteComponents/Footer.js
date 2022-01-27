@@ -1,6 +1,7 @@
 import Twitter from '../svgs/Twitter';
 import GitHub from '../svgs/GitHub';
 
+import React from 'react';
 export default function Footer() {
   return (
     <div className="flex items-center justify-between w-full px-24 py-3 mt-8 space-x-12 text-sm roboto-light">

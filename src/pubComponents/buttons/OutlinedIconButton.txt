@@ -1,3 +1,4 @@
+import React from 'react'
 export default function OutlinedIconButton() {
   const icon = (
     <svg className="w-[35px] fill-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 267">

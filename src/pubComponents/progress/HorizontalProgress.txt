@@ -1,3 +1,4 @@
+import React from 'react'
 export default function HorizontalProgress({ min, max, value }) {
   const current = Math.ceil((value / (max - min)) * 100);
 

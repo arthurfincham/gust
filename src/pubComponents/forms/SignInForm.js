@@ -1,3 +1,4 @@
+import React from 'react';
 export default function SignInForm() {
   const FormField = ({ type, name, placeholder, className }) => {
     return (
@@ -12,7 +13,11 @@ export default function SignInForm() {
   };
 
   const logo = (
-    <svg className="w-1/6 mr-2 fill-primary-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 267">
+    <svg
+      className="w-1/6 mr-2 fill-primary-600"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 268 267"
+    >
       <g>
         <path d="M62,85.51Q53.88,106.77,53.88,134t8.18,48.21a92.43,92.43,0,0,0,16.07,26.9V57.86A97.26,97.26,0,0,0,62,85.51Z" />
         <path d="M36,103.32q-5.13,13.37-5.12,30.51T36,164.15a58.24,58.24,0,0,0,10.11,16.92V85.93A61.23,61.23,0,0,0,36,103.32Z" />
@@ -27,8 +32,18 @@ export default function SignInForm() {
         {logo}
         <form className="flex flex-col items-center justify-between w-11/12 max-w-[600px] ">
           <div className="flex flex-col w-full md:w-3/4 lg:w-2/3">
-            <FormField type="text" name="email" placeholder="email" className="h-[50px]" />
-            <FormField type="password" name="password" placeholder="password" className="h-[50px]" />
+            <FormField
+              type="text"
+              name="email"
+              placeholder="email"
+              className="h-[50px]"
+            />
+            <FormField
+              type="password"
+              name="password"
+              placeholder="password"
+              className="h-[50px]"
+            />
           </div>
           <input
             type="submit"
