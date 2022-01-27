@@ -39,10 +39,6 @@ const ThirdTab = () => {
 export default function TabCard() {
   const [liveTab, setLiveTab] = useState(<FirstTab />);
 
-  const handleClick = tab => {
-    setLiveTab(tab);
-  };
-
   const buttonClasses =
     'border border-primary-600 rounded-lg bg-white shadow-md p-2 border-b-0 rounded-b-none hover:bg-gray-100';
 

@@ -4,7 +4,6 @@ import useMeasure from 'react-use-measure';
 import React, { useState } from 'react';
 import Brackets from '../../svgs/Brackets';
 
-import React from 'react';
 export default function DummyBar({ min, max, value }) {
   const current = Math.ceil((value / (max - min)) * 100);
 

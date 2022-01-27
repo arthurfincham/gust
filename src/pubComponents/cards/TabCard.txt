@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import React from 'react';
+
 const CardContent = ({ children }) => {
   return (
     <div className="w-full h-[350px] bg-white flex flex-col space-y-4 border-t border-indigo-600 rounded-b-xl items-center justify-center">
@@ -34,27 +36,35 @@ const ThirdTab = () => {
     </CardContent>
   );
 };
-
-import React from 'react'
 export default function TabCard() {
   const [liveTab, setLiveTab] = useState(<FirstTab />);
 
-  const handleClick = (tab) => {
+  const handleClick = tab => {
     setLiveTab(tab);
   };
 
-  const buttonClasses = 'border border-primary-600 rounded-lg bg-white shadow-md p-2 border-b-0 rounded-b-none hover:bg-gray-100';
+  const buttonClasses =
+    'border border-primary-600 rounded-lg bg-white shadow-md p-2 border-b-0 rounded-b-none hover:bg-gray-100';
 
   return (
     <div className="w-3/4 bg-gray-100 rounded-xl">
       <div className="flex px-3 pt-4 space-x-2 overflow-hidden rounded-t-xl">
-        <button className={buttonClasses} onClick={() => setLiveTab(<FirstTab />)}>
+        <button
+          className={buttonClasses}
+          onClick={() => setLiveTab(<FirstTab />)}
+        >
           Tab One
         </button>
-        <button className={buttonClasses} onClick={() => setLiveTab(<SecondTab />)}>
+        <button
+          className={buttonClasses}
+          onClick={() => setLiveTab(<SecondTab />)}
+        >
           Tab Two
         </button>
-        <button className={buttonClasses} onClick={() => setLiveTab(<ThirdTab />)}>
+        <button
+          className={buttonClasses}
+          onClick={() => setLiveTab(<ThirdTab />)}
+        >
           Tab Three
         </button>
       </div>

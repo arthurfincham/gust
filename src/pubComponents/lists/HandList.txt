@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 export default function HandList({ listData }) {
   const numbers = ['one', 'two', 'three', 'four', 'five', 'six'];
 
-  const getNum = (int) => {
+  const getNum = int => {
     return numbers[int];
   };
 
@@ -18,7 +18,9 @@ export default function HandList({ listData }) {
         {listData.map((item, index) => {
           return (
             <div key={index} className="text-md" style={listStyle}>
-              <span className="handwriting w-[50px] text-right text-primary-600">{getNum(index)}</span>
+              <span className="handwriting w-[50px] text-right text-primary-600">
+                {getNum(index)}
+              </span>
               <li className="ml-3 font-sans ">{item}</li>
             </div>
           );
