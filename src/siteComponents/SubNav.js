@@ -5,10 +5,7 @@ import React from 'react';
 export default function SubNav({ subNavClosed, toggleSubNav, liveComp }) {
   return (
     <div className="md:hidden flex w-full mt-[50px] h-[40px] px-4 shadow-md justify-center  items-center relative  border-t-[0.1em]">
-      <button
-        onClick={() => toggleSubNav()}
-        className="absolute italic text-left left-3"
-      >
+      <button onClick={() => toggleSubNav()} className="absolute italic text-left left-3">
         {subNavClosed ? <MenuIcon /> : <CloseIcon svgClass="pl-1" />}
       </button>
       <span className="font-sans-b">{liveComp.name}</span>
