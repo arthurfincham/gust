@@ -1,5 +1,5 @@
 import React from 'react';
-import React from 'react';
+
 export default function OutlinedButton() {
   return (
     <div className="flex items-center justify-center w-2/3 py-6 bg-white md:w-1/3 rounded-xl h-5/6">
