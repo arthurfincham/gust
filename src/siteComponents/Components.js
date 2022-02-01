@@ -1,41 +1,15 @@
-import Progress from '../pubComponents/progress/Progress';
-import DataDisplay from '../pubComponents/dataDisplay/DataDisplay';
-import Buttons from '../pubComponents/buttons/Buttons';
-import Timeline from '../pubComponents/timeline/Timeline';
-import Text from '../pubComponents/text/Text';
-import Lists from '../pubComponents/lists/Lists';
-import Forms from '../pubComponents/forms/Forms';
-import Waves from '../pubComponents/waves/Waves';
-import Cards from '../pubComponents/cards/Cards';
-import AllComponents from '../pubComponents/AllComponents';
+import React from 'react';
+import { compTypes } from '../pubComponents/compTypesExporter';
 import { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import SubNav from './SubNav';
 
-import React from 'react';
 export default function Components({
   subNavClosed,
   windowWidth,
   toggleSubNav,
 }) {
-  const compTypes = [
-    { id: 1, name: 'All Components', comp: <AllComponents /> },
-    { id: 2, name: 'Cards', comp: <Cards /> },
-    { id: 3, name: 'Buttons', comp: <Buttons /> },
-    { id: 4, name: 'Data Display', comp: <DataDisplay /> },
-    { id: 5, name: 'Forms', comp: <Forms /> },
-    { id: 6, name: 'Lists', comp: <Lists /> },
-    { id: 7, name: 'Progress', comp: <Progress /> },
-    { id: 8, name: 'Text', comp: <Text /> },
-    { id: 9, name: 'Timeline', comp: <Timeline /> },
-    { id: 10, name: 'Waves', comp: <Waves /> },
-  ];
-
-  const [liveComp, setLiveComp] = useState({
-    id: 1,
-    name: 'All Components',
-    comp: <AllComponents />,
-  });
+  const [liveComp, setLiveComp] = useState(compTypes[0]);
 
   const renderComp = () => {
     return liveComp.comp;
