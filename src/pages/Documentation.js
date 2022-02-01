@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
-import DocsMobileNav from './docComponents/DocsMobileNav';
-import DocsMainNav from './docComponents/DocsMainNav';
-import GettingStarted from './GettingStarted';
-import UsingComponents from './UsingComponents';
+import DocsMobileNav from '../documentation/docComponents/DocsMobileNav';
+import DocsMainNav from '../documentation/docComponents/DocsMainNav';
+import GettingStarted from '../documentation/GettingStarted';
+import UsingComponents from '../documentation/UsingComponents';
 
 export default function Documentation({ subNavClosed, windowWidth, toggleSubNav }) {
   const docSections = [

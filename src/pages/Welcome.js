@@ -3,17 +3,9 @@ import gustBannerMob from '../svgs/gustBannerMob.svg';
 
 import React from 'react';
 export default function Welcome() {
-  const points = [
-    'React and Tailwind CSS',
-    'Responsive components',
-    'No install',
-  ];
+  const points = ['React and Tailwind CSS', 'Responsive components', 'No install'];
 
-  const crossPoints = [
-    'Deprecated dependencies',
-    'Bloated packages',
-    'Confusing props',
-  ];
+  const crossPoints = ['Deprecated dependencies', 'Bloated packages', 'Confusing props'];
 
   const tick = () => {
     return (
@@ -79,13 +71,7 @@ export default function Welcome() {
         alt="gust button"
         className="hidden md:block"
       />
-      <img
-        width="80%"
-        height="80%"
-        src={gustBannerMob}
-        alt="gust button"
-        className="md:hidden"
-      />
+      <img width="80%" height="80%" src={gustBannerMob} alt="gust button" className="md:hidden" />
     </div>
   );
 }

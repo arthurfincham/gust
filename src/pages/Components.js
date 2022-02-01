@@ -2,13 +2,9 @@ import React from 'react';
 import { compTypes } from '../pubComponents/compTypesExporter';
 import { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
-import SubNav from './SubNav';
+import SubNav from '../siteComponents/SubNav';
 
-export default function Components({
-  subNavClosed,
-  windowWidth,
-  toggleSubNav,
-}) {
+export default function Components({ subNavClosed, windowWidth, toggleSubNav }) {
   const [liveComp, setLiveComp] = useState(compTypes[0]);
 
   const renderComp = () => {
@@ -17,18 +13,12 @@ export default function Components({
 
   const collapse = useSpring({
     duration: 100,
-    transform:
-      subNavClosed && windowWidth <= 768
-        ? 'translateX(-150px)'
-        : 'translateX(0px)',
+    transform: subNavClosed && windowWidth <= 768 ? 'translateX(-150px)' : 'translateX(0px)',
   });
 
   const mainCollapse = useSpring({
     duration: 100,
-    transform:
-      !subNavClosed && windowWidth <= 768
-        ? 'translateX(150px)'
-        : 'translateX(0px)',
+    transform: !subNavClosed && windowWidth <= 768 ? 'translateX(150px)' : 'translateX(0px)',
   });
 
   const listStyle = (type) => {
@@ -41,11 +31,7 @@ export default function Components({
 
   return (
     <div className="h-full sm:overflow-y-scroll md:overflow-auto componentsWrapper">
-      <SubNav
-        subNavClosed={subNavClosed}
-        toggleSubNav={toggleSubNav}
-        liveComp={liveComp}
-      />
+      <SubNav subNavClosed={subNavClosed} toggleSubNav={toggleSubNav} liveComp={liveComp} />
       <div className="flex w-full h-full md:mt-[50px]">
         <animated.ul
           style={collapse}
@@ -66,10 +52,7 @@ export default function Components({
           })}
         </animated.ul>
 
-        <animated.div
-          style={mainCollapse}
-          className="flex flex-col md:ml-[150px] items-center w-full "
-        >
+        <animated.div style={mainCollapse} className="flex flex-col md:ml-[150px] items-center w-full ">
           {renderComp()}
         </animated.div>
       </div>
