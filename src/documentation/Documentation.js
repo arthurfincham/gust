@@ -5,7 +5,11 @@ import GettingStarted from './GettingStarted';
 import UsingComponents from './UsingComponents';
 
 import React from 'react';
-export default function Documentation({ isClosed, windowWidth, setIsClosed }) {
+export default function Documentation({
+  subNavClosed,
+  windowWidth,
+  toggleSubNav,
+}) {
   const gettingStarted = {
     id: 1,
     name: 'Getting Started',
@@ -30,16 +34,20 @@ export default function Documentation({ isClosed, windowWidth, setIsClosed }) {
   const collapse = useSpring({
     duration: 100,
     transform:
-      isClosed && windowWidth <= 768 ? 'translateX(-150px)' : 'translateX(0px)',
+      subNavClosed && windowWidth <= 768
+        ? 'translateX(-150px)'
+        : 'translateX(0px)',
   });
 
   const mainCollapse = useSpring({
     duration: 100,
     transform:
-      !isClosed && windowWidth <= 768 ? 'translateX(150px)' : 'translateX(0px)',
+      !subNavClosed && windowWidth <= 768
+        ? 'translateX(150px)'
+        : 'translateX(0px)',
   });
 
-  const listStyle = type => {
+  const listStyle = (type) => {
     if (type.id === liveDoc.id) {
       return {
         color: '#5046E5',
@@ -49,7 +57,11 @@ export default function Documentation({ isClosed, windowWidth, setIsClosed }) {
 
   return (
     <div className="h-full sm:overflow-y-scroll md:overflow-auto componentsWrapper scroll-smooth">
-      <DocNav isClosed={isClosed} setIsClosed={setIsClosed} liveDoc={liveDoc} />
+      <DocNav
+        subNavClosed={subNavClosed}
+        toggleSubNav={toggleSubNav}
+        liveDoc={liveDoc}
+      />
       <div className="flex w-full h-full mt-[20px] md:mt-[50px]">
         <animated.ul
           style={collapse}

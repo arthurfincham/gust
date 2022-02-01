@@ -8,7 +8,7 @@ import useGoogleAnalytics from './utils/useGoogleAnalytics';
 
 function GARoutes() {
   useGoogleAnalytics();
-  const [isClosed, setIsClosed] = useState(true);
+  const [subNavClosed, setSubNavClosed] = useState(true);
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -20,7 +20,7 @@ function GARoutes() {
 
   return (
     <div className="App scroll-smooth">
-      <Navbar setIsClosed={setIsClosed} isClosed={isClosed} />
+      <Navbar />
       <main>
         <Routes>
           <Route key={1} path="/" element={<Welcome />} />
@@ -29,9 +29,9 @@ function GARoutes() {
             path="/components"
             element={
               <Components
-                isClosed={isClosed}
+                subNavClosed={subNavClosed}
                 windowWidth={windowWidth}
-                setIsClosed={setIsClosed}
+                toggleSubNav={() => setSubNavClosed(!subNavClosed)}
               />
             }
           />
@@ -40,9 +40,9 @@ function GARoutes() {
             path="/documentation"
             element={
               <Documentation
-                isClosed={isClosed}
+                subNavClosed={subNavClosed}
                 windowWidth={windowWidth}
-                setIsClosed={setIsClosed}
+                toggleSubNav={() => setSubNavClosed(!subNavClosed)}
               />
             }
           />
